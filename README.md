@@ -2,7 +2,7 @@
 
 Personal portfolio: projects, skills and resume.
 
-**Live:** https://adityajadhav.vercel.app
+**Live:** https://aditya-jadhav.vercel.app
 
 ## Projects featured
 - **ProductIQ:** live AI product strategy app (Python, MySQL, Power BI, Gemini API)
