@@ -58,7 +58,7 @@ function Template({ v }) {
     <div aria-hidden={"true"} className={"v-blob v-b1"} style={{"width": "560px", "height": "560px", "left": "-120px", "top": "-160px", "background": "rgba(37,99,235,.35)"}}></div>
     <div aria-hidden={"true"} className={"v-blob v-b2"} style={{"width": "480px", "height": "480px", "right": "-120px", "bottom": "-160px", "background": "rgba(34,211,238,.18)"}}></div>
 
-    <div style={{"position": "relative", "maxWidth": "1240px", "width": "100%", "margin": "0 auto", "padding": "118px 32px 250px", "boxSizing": "border-box", "display": "flex", "flexWrap": "wrap", "gap": "56px", "alignItems": "center", "pointerEvents": "none"}}>
+    <div className={"v-herobox"} style={{"position": "relative", "maxWidth": "1240px", "width": "100%", "margin": "0 auto", "padding": "118px 32px 250px", "boxSizing": "border-box", "display": "flex", "flexWrap": "wrap", "gap": "56px", "alignItems": "center", "pointerEvents": "none"}}>
       <div style={{"flex": "1 1 480px", "minWidth": "0", "pointerEvents": "auto"}}>
         <p className={"v-fade"} style={{"margin": "0 0 24px", "fontFamily": "'JetBrains Mono', monospace", "fontSize": "13px", "color": "#67E8F9", "letterSpacing": "1px", "animationDelay": ".2s"}}>&gt; SELECT insight FROM data<span className={"v-caret"}></span></p>
         <h1 style={{"margin": "0", "fontSize": "clamp(42px, 6vw, 74px)", "lineHeight": "1.02", "fontWeight": "800", "letterSpacing": "-3px"}}>
@@ -87,7 +87,7 @@ function Template({ v }) {
           </div>
 
           <div style={{"position": "relative", "height": "410px", "marginTop": "18px", "fontFamily": "'JetBrains Mono', monospace"}}>
-            <div className={"v-fx"} style={css(v.headerStyle)}><span>order_id</span><span>category</span><span>amount</span></div>
+            <div className={"v-fx v-thead"} style={css(v.headerStyle)}><span>order_id</span><span>category</span><span>amount</span></div>
             {(v.scanOn) ? (<><div className={"v-scan"}></div></>) : null}
             {(v.recs || []).map((r, _i0) => (<React.Fragment key={_i0}>
               <div className={"v-rec"} style={css(r.style)}><span>{r.id}</span><span>{r.cat}</span><span>{r.amt}</span><span style={css(r.flagStyle)}>{r.flag}</span></div>
@@ -453,7 +453,7 @@ class Portfolio extends DCLogic {
       this.setState({ stage: (S.stage + 1) % 4, stageStart: Date.now() });
     }, 4400);
     this.tickTimer = setInterval(() => this.setState({ tick: this.S().tick + 1 }), 1500);
-    this.frameTimer = setInterval(() => { if (!document.hidden) this.forceUpdate(); }, 90);
+    this.frameTimer = setInterval(() => { if (document.hidden) return; const heroH = (this.canvas && this.canvas.clientHeight) || 900; if (this.S().scrollTop < heroH || Date.now() - (this._seenAt || 0) < 2600) this.forceUpdate(); }, 90);
     this._onWin = () => { if (this._scrollRaf) return; this._scrollRaf = requestAnimationFrame(() => { this._scrollRaf = 0; this.onWinScroll(); }); };
     window.addEventListener('scroll', this._onWin, { passive: true });
     window.addEventListener('resize', this._onWin);
@@ -482,12 +482,12 @@ class Portfolio extends DCLogic {
       this.ioIn = new IntersectionObserver((entries) => {
         const seen = Object.assign({}, this._seen || this.S().seen); let ch = false;
         entries.forEach((e) => { const k = e.target.getAttribute('data-k'); if (k && e.isIntersecting && !seen[k]) { seen[k] = Date.now(); ch = true; } });
-        if (ch) { this._seen = seen; this.setState({ seen }); }
+        if (ch) { this._seen = seen; this._seenAt = Date.now(); this.setState({ seen }); }
       }, { root, threshold: 0, rootMargin: '0px 0px -12% 0px' });
       this.ioOut = new IntersectionObserver((entries) => {
         const seen = Object.assign({}, this._seen || this.S().seen); let ch = false;
         entries.forEach((e) => { const k = e.target.getAttribute('data-k'); if (k && !e.isIntersecting && seen[k]) { delete seen[k]; ch = true; } });
-        if (ch) { this._seen = seen; this.setState({ seen }); }
+        if (ch) { this._seen = seen; this._seenAt = Date.now(); this.setState({ seen }); }
       }, { root, threshold: 0, rootMargin: '140px 0px 140px 0px' });
       Object.keys(this.els).forEach((k) => { this.ioIn.observe(this.els[k]); this.ioOut.observe(this.els[k]); });
     } catch (e) {
@@ -552,15 +552,17 @@ class Portfolio extends DCLogic {
     if (this.S().scrollTop > (c.clientHeight || 900)) return;
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     const W = c.clientWidth, H = c.clientHeight; if (!W || !H) return;
-    if (c.width !== Math.round(W * dpr) || c.height !== Math.round(H * dpr)) { c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); this.slots = null; }
+    if (c.width !== Math.round(W * dpr) || c.height !== Math.round(H * dpr)) { c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); }
     const g = c.getContext('2d');
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     g.clearRect(0, 0, W, H);
     const now = ts;
     const t = (ts - this.t0) / 1000;
+    const dtf = this._lts ? Math.min(4, Math.max(0.25, (ts - this._lts) / 16.667)) : 1; this._lts = ts;
     const intro = this.reduce ? 1 : Math.min(1, t / 1.6);
     const speed = this.reduce ? 0 : (0.6 + 0.4 * intro);
-    const top = H - 215, bot = H - 58;
+    const cmp = window.innerHeight < 940 && W >= 900;
+    const top = H - (cmp ? 178 : 215), bot = H - (cmp ? 40 : 58);
     const gateX = W * 0.28;
     const hasCard = W >= 900;
     const cw = 150, ch = 130;
@@ -568,7 +570,7 @@ class Portfolio extends DCLogic {
     const endX = hasCard ? cardX - 70 : W - 30;
     const curve = (u) => Math.pow(u, 1.35) + 0.035 * Math.sin(u * 14);
     const trendY = (x) => { const u = Math.min(1, Math.max(0, (x - gateX) / (endX - gateX))); return bot - curve(u) * (bot - top - 40); };
-    if (hasCard && !this.slots) { this.slots = this.buildCard(cw, ch); this.slotT = new Array(this.slots.length).fill(0); this.nextSlot = 0; this.cycleStart = now; this.solvedAt = 0; }
+    if (hasCard && !this.slots) { this.slots = this.buildCard(cw, ch); this.slotT = new Array(this.slots.length).fill(0); this.nextSlot = 0; this.cycleStart = now - 1; this.solvedAt = 0; }
 
     for (let i = 0; i < this.stars.length; i++) {
       const st = this.stars[i];
@@ -598,7 +600,7 @@ class Portfolio extends DCLogic {
       if (this.reduce) built = n;
       if (built >= n && !this.solvedAt) { this.solvedAt = now; this.pipe.solutions = (this.pipe.solutions || 0) + 1; }
       if (this.solvedAt) solvedP = Math.min(1, (now - this.solvedAt) / 700);
-      if (this.solvedAt && !this.reduce && now - this.solvedAt > 3200) { this.cycleStart = now; this.solvedAt = 0; this.nextSlot = 0; solvedP = 0; }
+      if (this.solvedAt && !this.reduce && now - this.solvedAt > 3200) { this.cycleStart = now - 1; this.solvedAt = 0; this.nextSlot = 0; solvedP = 0; }
       // card glow when solved
       {
         const gx = cardX + cw / 2, gy = cardY + ch / 2;
@@ -664,7 +666,7 @@ class Portfolio extends DCLogic {
     g.globalCompositeOperation = 'lighter';
     for (let n = 0; n < this.PN; n++) {
       const q = this.pp[n];
-      q.p += q.sp * speed;
+      q.p += q.sp * speed * dtf;
       let x = -20 + q.p * (W + 40), y, col, a = intro, r = 1.7;
       const base = top + q.seed * (bot - top);
       if (x < gateX) {
@@ -684,7 +686,7 @@ class Portfolio extends DCLogic {
           col = ke > 0.6 ? (q.i % 6 === 0 ? '103,232,249' : '96,165,250') : '148,163,184';
           a *= 0.55 + 0.4 * ke; r = q.i % 6 === 0 ? 2.4 : 1.8;
         } else {
-          if (q.slot === undefined || q.slot < 0) { q.slot = this.solvedAt ? -1 : (this.nextSlot < this.slots.length ? this.nextSlot++ : -1); q.sx = x; }
+          if (q.slot === undefined || q.slot < 0) { q.slot = (this.solvedAt || x - endX > 24) ? -1 : (this.nextSlot < this.slots.length ? this.nextSlot++ : -1); q.sx = x; }
           if (q.slot < 0) { q.p = 1; }
           else {
             const sp = this.slots[q.slot];

@@ -28,3 +28,19 @@ a:focus-visible, button:focus-visible { outline: 3px solid #22D3EE; outline-offs
   /* the skill panel cycles through skills; a fixed height stops the page below from jumping */
   .v-skillpanel { min-height: 512px; }
 }
+
+/* hero demo table: columns line up under their headings */
+.v-rec > span:nth-child(1), .v-thead > span:nth-child(1) { width: 64px; flex: none; }
+.v-rec > span:nth-child(2), .v-thead > span:nth-child(2) { flex: 1; text-align: left; padding-left: 28px; }
+.v-rec > span:nth-child(3), .v-thead > span:nth-child(3) { width: 84px; flex: none; text-align: right; }
+.v-thead::after { content: ""; width: 76px; flex: none; }
+
+/* laptop screens (short browser windows): fit the whole hero, data pipeline included, on the first screen */
+@media (min-width: 900px) and (max-height: 939px) {
+  .v-herobox { padding: 96px 32px 196px !important; gap: 44px !important; }
+  #top h1 { font-size: clamp(42px, 4.6vw, 60px) !important; letter-spacing: -2.4px !important; }
+  #top .v-herobox > div:first-child > p:nth-of-type(2) { margin-top: 20px !important; font-size: 17px !important; }
+  #top .v-herobox > div:first-child > div:nth-of-type(1) { margin-top: 26px !important; }
+  #top .v-herobox > div:first-child > div:nth-of-type(2) { margin-top: 26px !important; }
+  .v-demo { zoom: 0.8; }
+}
