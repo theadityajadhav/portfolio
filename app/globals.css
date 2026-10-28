@@ -1,0 +1,30 @@
+/* Page-level rules for the real site (the design rules live in design.css). */
+html { background: #06142B; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: #FFFFFF; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+::selection { background: #67E8F9; color: #06142B; }
+a:focus-visible, button:focus-visible { outline: 3px solid #22D3EE; outline-offset: 3px; border-radius: 6px; }
+/* the hero fills the screen on phones without jumping when the address bar hides */
+#top { min-height: 100svh !important; }
+@supports not (min-height: 100svh) { #top { min-height: 100vh !important; } }
+
+/* ---- responsive refinements for the real site ---- */
+.v-ringcard { justify-content: center; }
+@media (min-width: 1000px) {
+  .v-skillpanel { align-self: flex-start; position: sticky; top: 100px; }
+}
+@media (max-width: 900px) {
+  /* the project list sits above the projects on small screens, so it must not stay pinned */
+  .v-projnav { display: none; }
+}
+@media (max-width: 760px) {
+  .v-ghost { display: none; }
+  .v-procwrap > div:not(:last-child) { display: none; }
+}
+@media (max-width: 480px) {
+  /* the skill panel cycles through skills; a fixed height stops the page below from jumping */
+  .v-skillpanel { min-height: 512px; }
+}
