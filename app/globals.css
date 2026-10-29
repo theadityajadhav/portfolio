@@ -26,7 +26,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #22D3EE; outline-offs
 }
 @media (max-width: 480px) {
   /* the skill panel cycles through skills; a fixed height stops the page below from jumping */
-  .v-skillpanel { min-height: 512px; }
+  .v-skillpanel { min-height: 644px; }
 }
 
 /* hero demo table: columns line up under their headings */

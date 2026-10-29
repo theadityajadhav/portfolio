@@ -189,48 +189,55 @@ function Template({ v }) {
           <div style={{"paddingTop": "18px", "fontSize": "16px", "lineHeight": "1.7", "color": "#334155", "minHeight": "120px"}}>{v.tabText}</div>
           <div style={{"display": "flex", "gap": "12px", "flexWrap": "wrap", "marginTop": "8px"}}>
             <a className={"v-btn"} href={"https://aistrategyconsultant.streamlit.app"} target={"_blank"} rel={"noopener noreferrer"} style={{"display": "inline-flex", "alignItems": "center", "gap": "8px", "minHeight": "46px", "padding": "0 22px", "background": "#0A2540", "color": "#FFFFFF", "borderRadius": "8px", "fontWeight": "700", "fontSize": "14px", "textDecoration": "none"}}>Open live app <span className={"v-arr"}>→</span></a>
-            <a className={"v-btn"} href={"https://github.com/theadityajadhav/ProductIQ"} target={"_blank"} rel={"noopener noreferrer"} style={{"display": "inline-flex", "alignItems": "center", "minHeight": "46px", "padding": "0 22px", "border": "1.5px solid #0A2540", "color": "#0A2540", "borderRadius": "8px", "fontWeight": "700", "fontSize": "14px", "textDecoration": "none"}}>View code</a>
+            <a className={"v-btn"} href={"https://github.com/theadityajadhav/ProductIQ"} target={"_blank"} rel={"noopener noreferrer"} style={{"display": "inline-flex", "alignItems": "center", "minHeight": "46px", "padding": "0 22px", "border": "1.5px solid #0A2540", "color": "#0A2540", "borderRadius": "8px", "fontWeight": "700", "fontSize": "14px", "textDecoration": "none"}}>View code on GitHub</a>
           </div>
         </article>
 
         <article id={"p2"} ref={v.refP2} className={v.cls.p2} style={{"position": "relative"}}>
           <div aria-hidden={"true"} className={"v-ghost"}>02</div>
-          <div className={"st"} style={{"fontSize": "13px", "fontWeight": "800", "letterSpacing": "1.5px", "color": "#1D4ED8"}}>EXCEL · PIVOT TABLES · DASHBOARD</div>
-          <h3 className={"st"} style={{"margin": "10px 0 0", "fontSize": "clamp(32px, 4vw, 44px)", "fontWeight": "800", "letterSpacing": "-1.5px"}}>AstroSage Call Centre</h3>
-          <p className={"st"} style={{"margin": "10px 0 0", "fontSize": "20px", "lineHeight": "1.5", "color": "#475569"}}>“Where should a ₹1 crore investment go?”</p>
-          <div className={"v-tilt"} onMouseMove={v.tilt2} onMouseLeave={v.untilt2} style={css(v.tiltStyle2)}><div className={"v-frame"} style={{"marginTop": "30px", "borderRadius": "12px", "overflow": "hidden", "border": "1px solid #E5E9F0", "boxShadow": "0 40px 70px -40px rgba(10,37,64,.5)"}}>
-            <div style={{"aspectRatio": "2.35 / 1", "overflow": "hidden", "background": "#FFFFFF"}}><img loading={"lazy"} decoding={"async"} src={"/images/astrosage-excel-dashboard.jpg"} alt={"AstroSage Excel dashboard with KPIs and charts"} style={{"width": "100%", "height": "100%", "objectFit": "cover", "objectPosition": "center", "display": "block"}} /></div>
+          <div className={"st"} style={{"fontSize": "13px", "fontWeight": "800", "letterSpacing": "1.5px", "color": "#1D4ED8"}}>POWER BI · MYSQL · DAX · POWER QUERY</div>
+          <h3 className={"st"} style={{"margin": "10px 0 0", "fontSize": "clamp(32px, 4vw, 44px)", "fontWeight": "800", "letterSpacing": "-1.5px"}}>Columbia Asia Hospital</h3>
+          <p className={"st"} style={{"margin": "10px 0 0", "maxWidth": "680px", "fontSize": "20px", "lineHeight": "1.5", "color": "#475569"}}>“Where is the hospital overloaded, and where should it hire, set shifts and offer discounts?”</p>
+          <div className={"v-tilt"} onMouseMove={v.tilt3} onMouseLeave={v.untilt3} style={css(v.tiltStyle3)}><div className={"v-frame"} style={{"marginTop": "30px", "border": "1px solid #D5DCE6", "borderRadius": "12px", "overflow": "hidden", "background": "#FFFFFF", "boxShadow": "0 40px 70px -40px rgba(10,37,64,.5)"}}>
+            <div style={{"display": "flex", "alignItems": "center", "gap": "8px", "padding": "11px 14px", "background": "#F4F6FA", "borderBottom": "1px solid #E5E9F0"}}>
+              <span style={{"width": "10px", "height": "10px", "borderRadius": "50%", "background": "#F87171"}}></span><span style={{"width": "10px", "height": "10px", "borderRadius": "50%", "background": "#FBBF24"}}></span><span style={{"width": "10px", "height": "10px", "borderRadius": "50%", "background": "#34D399"}}></span>
+              <span style={{"marginLeft": "10px", "flex": "1", "minWidth": "0", "padding": "5px 12px", "borderRadius": "6px", "background": "#FFFFFF", "fontSize": "12px", "color": "#475569", "overflow": "hidden", "whiteSpace": "nowrap", "textOverflow": "ellipsis"}}>Power BI · columbia_asia_dashboard.pbix · {v.caPage}</span>
+              <span style={{"fontSize": "11px", "fontWeight": "800", "color": "#475569"}}>8 PAGES</span>
+            </div>
+            <div style={{"position": "relative", "aspectRatio": "1600 / 917", "overflow": "hidden", "background": "#FFFFFF"}}>
+              {(v.caShots || []).map((sh, _i0) => (<React.Fragment key={_i0}><img loading={"lazy"} decoding={"async"} className={"v-shot"} src={sh.src} alt={sh.alt} style={css(sh.style)} /></React.Fragment>))}
+            </div>
           </div></div>
-          <div ref={v.refC2} className={`st ${v.cls.c2}`} style={{"display": "grid", "gridTemplateColumns": "repeat(auto-fit, minmax(260px, 1fr))", "gap": "18px", "marginTop": "26px"}}>
+          <div style={{"display": "flex", "gap": "8px", "marginTop": "14px", "flexWrap": "wrap"}}>
+            {(v.caTabs || []).map((st, _i0) => (<React.Fragment key={_i0}><button className={"v-pill"} type={"button"} onClick={st.pick} style={css(st.style)}>{st.label}</button></React.Fragment>))}
+          </div>
+          <div ref={v.refC5} className={`st ${v.cls.c5}`} style={{"display": "grid", "gridTemplateColumns": "repeat(auto-fit, minmax(260px, 1fr))", "gap": "18px", "marginTop": "26px"}}>
             <div className={"v-hov"} style={{"border": "1px solid #E5E9F0", "borderRadius": "12px", "padding": "22px", "background": "#FFFFFF"}}>
-              <div style={{"fontSize": "13px", "fontWeight": "800", "color": "#0A2540"}}>Busiest hours</div>
-              <div style={{"fontSize": "12px", "color": "#64748B", "marginTop": "2px"}}>Consultations per hour, all days</div>
-              <div style={{"display": "flex", "flexDirection": "column", "gap": "9px", "marginTop": "16px"}}>
-                {(v.peaks || []).map((pk, _i0) => (<React.Fragment key={_i0}>
-                  <div style={{"display": "flex", "alignItems": "center", "gap": "10px"}}><span style={{"width": "46px", "fontSize": "12px", "fontWeight": "700"}}>{pk.h}</span><div style={{"flex": "1", "height": "14px", "background": "#EEF2F7", "borderRadius": "3px", "overflow": "hidden"}}><div className={"v-hbar"} style={css(pk.style)}></div></div><span style={{"width": "44px", "fontSize": "12px", "fontWeight": "700", "textAlign": "right"}}>{pk.v}</span></div>
+              <div style={{"fontSize": "13px", "fontWeight": "800", "color": "#0A2540"}}>Where the visits go</div>
+              <div style={{"fontSize": "12px", "color": "#64748B", "marginTop": "2px"}}>Visits by department · case-study data, Apr 2019 to Oct 2020</div>
+              <div style={{"display": "flex", "flexDirection": "column", "gap": "8px", "marginTop": "16px"}}>
+                {(v.caDepts || []).map((dp, _i0) => (<React.Fragment key={_i0}>
+                  <div style={{"display": "flex", "alignItems": "center", "gap": "10px"}}><span style={css(dp.nameStyle)}>{dp.name}</span><div style={{"flex": "1", "height": "12px", "background": "#EEF2F7", "borderRadius": "3px", "overflow": "hidden"}}><div className={"v-hbar"} style={css(dp.style)}></div></div><span style={{"width": "40px", "fontSize": "12px", "fontWeight": "700", "textAlign": "right"}}>{dp.v}</span></div>
                 </React.Fragment>))}
               </div>
-              <div style={{"fontSize": "13px", "color": "#475569", "marginTop": "14px", "lineHeight": "1.5"}}>Calls peak early in the morning and mid-afternoon, so shifts should be planned around those hours.</div>
+              <div style={{"fontSize": "13px", "color": "#475569", "marginTop": "14px", "lineHeight": "1.5"}}>General Practice takes 78.6% of visits with only 3 doctors, about 2,413 visits each.</div>
             </div>
             <div className={"v-hov"} style={{"border": "1px solid #E5E9F0", "borderRadius": "12px", "padding": "22px", "background": "#FFFFFF"}}>
-              <div style={{"fontSize": "13px", "fontWeight": "800", "color": "#0A2540"}}>My ₹1 crore recommendation</div>
-              <div style={{"fontSize": "12px", "color": "#64748B", "marginTop": "2px"}}>Split across five areas</div>
-              <div style={{"display": "flex", "height": "22px", "borderRadius": "6px", "overflow": "hidden", "marginTop": "18px"}}>
-                {(v.alloc || []).map((al, _i0) => (<React.Fragment key={_i0}><div className={"v-hbar"} style={css(al.style)}></div></React.Fragment>))}
-              </div>
-              <div style={{"display": "flex", "flexDirection": "column", "gap": "7px", "marginTop": "16px"}}>
-                {(v.alloc || []).map((al, _i0) => (<React.Fragment key={_i0}>
-                  <div style={{"display": "flex", "alignItems": "center", "gap": "10px", "fontSize": "13px"}}><span style={css(al.dot)}></span><span style={{"flex": "1"}}>{al.name}</span><span style={{"fontWeight": "800"}}>{al.v}</span></div>
+              <div style={{"fontSize": "13px", "fontWeight": "800", "color": "#0A2540"}}>What I recommended</div>
+              <div style={{"fontSize": "12px", "color": "#64748B", "marginTop": "2px"}}>Each one backed by the numbers</div>
+              <div style={{"display": "flex", "flexDirection": "column", "gap": "12px", "marginTop": "16px"}}>
+                {(v.caRecs || []).map((rc, _i0) => (<React.Fragment key={_i0}>
+                  <div style={{"display": "flex", "gap": "12px", "alignItems": "flex-start"}}><span style={css(rc.numStyle)}>{rc.n}</span><div style={{"minWidth": "0"}}><div style={{"fontSize": "14px", "fontWeight": "800", "color": "#0A2540"}}>{rc.title}</div><div style={{"fontSize": "13px", "color": "#475569", "lineHeight": "1.5", "marginTop": "2px"}}>{rc.text}</div></div></div>
                 </React.Fragment>))}
               </div>
             </div>
           </div>
-          <div ref={v.refM2} className={`st ${v.cls.m2}`} style={{"display": "grid", "gridTemplateColumns": "repeat(3, minmax(0, 1fr))", "gap": "14px", "marginTop": "26px", "padding": "22px 0", "borderTop": "1px solid #E5E9F0", "borderBottom": "1px solid #E5E9F0"}}>
-            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px"}}>{v.p2a}</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Consultations analysed</div></div>
-            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px"}}>{v.p2b}%</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Callers who come back</div></div>
-            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px", "color": "#1D4ED8"}}>{v.p2c}%</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Revenue from calls</div></div>
+          <div ref={v.refM5} className={`st ${v.cls.m5}`} style={{"display": "grid", "gridTemplateColumns": "repeat(3, minmax(0, 1fr))", "gap": "14px", "marginTop": "26px", "padding": "22px 0", "borderTop": "1px solid #E5E9F0", "borderBottom": "1px solid #E5E9F0"}}>
+            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px"}}>{v.p5a}</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Visits analysed</div></div>
+            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px"}}>{v.p5b}%</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Visits to one department</div></div>
+            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px", "color": "#1D4ED8"}}>{v.p5c}</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Minutes average wait</div></div>
           </div>
-          <a className={"v-btn"} href={"https://github.com/theadityajadhav/astrosage-customer-support-analytics"} target={"_blank"} rel={"noopener noreferrer"} style={{"display": "inline-flex", "alignItems": "center", "gap": "8px", "marginTop": "22px", "minHeight": "46px", "padding": "0 22px", "border": "1.5px solid #0A2540", "color": "#0A2540", "borderRadius": "8px", "fontWeight": "700", "fontSize": "14px", "textDecoration": "none"}}>View full analysis <span className={"v-arr"}>→</span></a>
+          <a className={"v-btn"} href={"https://github.com/theadityajadhav/columbia-asia-hospital-analysis"} target={"_blank"} rel={"noopener noreferrer"} style={{"display": "inline-flex", "alignItems": "center", "gap": "8px", "marginTop": "22px", "minHeight": "46px", "padding": "0 22px", "border": "1.5px solid #0A2540", "color": "#0A2540", "borderRadius": "8px", "fontWeight": "700", "fontSize": "14px", "textDecoration": "none"}}>View SQL and Power BI <span className={"v-arr"}>→</span></a>
         </article>
 
         <article id={"p3"} ref={v.refP3} className={v.cls.p3} style={{"position": "relative"}}>
@@ -271,6 +278,46 @@ function Template({ v }) {
           <a className={"v-btn"} href={"https://github.com/theadityajadhav/Chinook-SQL-Data-Analysis"} target={"_blank"} rel={"noopener noreferrer"} style={{"display": "inline-flex", "alignItems": "center", "gap": "8px", "marginTop": "22px", "minHeight": "46px", "padding": "0 22px", "border": "1.5px solid #0A2540", "color": "#0A2540", "borderRadius": "8px", "fontWeight": "700", "fontSize": "14px", "textDecoration": "none"}}>View SQL on GitHub <span className={"v-arr"}>→</span></a>
         </article>
 
+        <article id={"p4"} ref={v.refP4} className={v.cls.p4} style={{"position": "relative"}}>
+          <div aria-hidden={"true"} className={"v-ghost"}>04</div>
+          <div className={"st"} style={{"fontSize": "13px", "fontWeight": "800", "letterSpacing": "1.5px", "color": "#1D4ED8"}}>EXCEL · PIVOT TABLES · DASHBOARD</div>
+          <h3 className={"st"} style={{"margin": "10px 0 0", "fontSize": "clamp(32px, 4vw, 44px)", "fontWeight": "800", "letterSpacing": "-1.5px"}}>AstroSage Call Centre</h3>
+          <p className={"st"} style={{"margin": "10px 0 0", "fontSize": "20px", "lineHeight": "1.5", "color": "#475569"}}>“Where should a ₹1 crore investment go?”</p>
+          <div className={"v-tilt"} onMouseMove={v.tilt2} onMouseLeave={v.untilt2} style={css(v.tiltStyle2)}><div className={"v-frame"} style={{"marginTop": "30px", "borderRadius": "12px", "overflow": "hidden", "border": "1px solid #E5E9F0", "boxShadow": "0 40px 70px -40px rgba(10,37,64,.5)"}}>
+            <div style={{"aspectRatio": "2.35 / 1", "overflow": "hidden", "background": "#FFFFFF"}}><img loading={"lazy"} decoding={"async"} src={"/images/astrosage-excel-dashboard.jpg"} alt={"AstroSage Excel dashboard with KPIs and charts"} style={{"width": "100%", "height": "100%", "objectFit": "cover", "objectPosition": "center", "display": "block"}} /></div>
+          </div></div>
+          <div ref={v.refC2} className={`st ${v.cls.c2}`} style={{"display": "grid", "gridTemplateColumns": "repeat(auto-fit, minmax(260px, 1fr))", "gap": "18px", "marginTop": "26px"}}>
+            <div className={"v-hov"} style={{"border": "1px solid #E5E9F0", "borderRadius": "12px", "padding": "22px", "background": "#FFFFFF"}}>
+              <div style={{"fontSize": "13px", "fontWeight": "800", "color": "#0A2540"}}>Busiest hours</div>
+              <div style={{"fontSize": "12px", "color": "#64748B", "marginTop": "2px"}}>Consultations per hour, all days</div>
+              <div style={{"display": "flex", "flexDirection": "column", "gap": "9px", "marginTop": "16px"}}>
+                {(v.peaks || []).map((pk, _i0) => (<React.Fragment key={_i0}>
+                  <div style={{"display": "flex", "alignItems": "center", "gap": "10px"}}><span style={{"width": "46px", "fontSize": "12px", "fontWeight": "700"}}>{pk.h}</span><div style={{"flex": "1", "height": "14px", "background": "#EEF2F7", "borderRadius": "3px", "overflow": "hidden"}}><div className={"v-hbar"} style={css(pk.style)}></div></div><span style={{"width": "44px", "fontSize": "12px", "fontWeight": "700", "textAlign": "right"}}>{pk.v}</span></div>
+                </React.Fragment>))}
+              </div>
+              <div style={{"fontSize": "13px", "color": "#475569", "marginTop": "14px", "lineHeight": "1.5"}}>Calls peak early in the morning and mid-afternoon, so shifts should be planned around those hours.</div>
+            </div>
+            <div className={"v-hov"} style={{"border": "1px solid #E5E9F0", "borderRadius": "12px", "padding": "22px", "background": "#FFFFFF"}}>
+              <div style={{"fontSize": "13px", "fontWeight": "800", "color": "#0A2540"}}>My ₹1 crore recommendation</div>
+              <div style={{"fontSize": "12px", "color": "#64748B", "marginTop": "2px"}}>Split across five areas</div>
+              <div style={{"display": "flex", "height": "22px", "borderRadius": "6px", "overflow": "hidden", "marginTop": "18px"}}>
+                {(v.alloc || []).map((al, _i0) => (<React.Fragment key={_i0}><div className={"v-hbar"} style={css(al.style)}></div></React.Fragment>))}
+              </div>
+              <div style={{"display": "flex", "flexDirection": "column", "gap": "7px", "marginTop": "16px"}}>
+                {(v.alloc || []).map((al, _i0) => (<React.Fragment key={_i0}>
+                  <div style={{"display": "flex", "alignItems": "center", "gap": "10px", "fontSize": "13px"}}><span style={css(al.dot)}></span><span style={{"flex": "1"}}>{al.name}</span><span style={{"fontWeight": "800"}}>{al.v}</span></div>
+                </React.Fragment>))}
+              </div>
+            </div>
+          </div>
+          <div ref={v.refM2} className={`st ${v.cls.m2}`} style={{"display": "grid", "gridTemplateColumns": "repeat(3, minmax(0, 1fr))", "gap": "14px", "marginTop": "26px", "padding": "22px 0", "borderTop": "1px solid #E5E9F0", "borderBottom": "1px solid #E5E9F0"}}>
+            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px"}}>{v.p2a}</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Consultations analysed</div></div>
+            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px"}}>{v.p2b}%</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Callers who come back</div></div>
+            <div><div style={{"fontSize": "34px", "fontWeight": "800", "letterSpacing": "-1px", "color": "#1D4ED8"}}>{v.p2c}%</div><div style={{"fontSize": "13px", "color": "#64748B"}}>Revenue from calls</div></div>
+          </div>
+          <a className={"v-btn"} href={"https://github.com/theadityajadhav/astrosage-customer-support-analytics"} target={"_blank"} rel={"noopener noreferrer"} style={{"display": "inline-flex", "alignItems": "center", "gap": "8px", "marginTop": "22px", "minHeight": "46px", "padding": "0 22px", "border": "1.5px solid #0A2540", "color": "#0A2540", "borderRadius": "8px", "fontWeight": "700", "fontSize": "14px", "textDecoration": "none"}}>View full analysis <span className={"v-arr"}>→</span></a>
+        </article>
+
       </div>
     </div>
   </section>
@@ -294,7 +341,7 @@ function Template({ v }) {
         <div className={"v-skillpanel"} style={{"flex": "1 1 520px", "minWidth": "0", "background": "#FFFFFF", "border": "1px solid #E5E9F0", "borderRadius": "14px", "padding": "28px", "boxSizing": "border-box", "boxShadow": "0 30px 60px -45px rgba(10,37,64,.5)"}}>
           <div style={{"display": "flex", "justifyContent": "space-between", "alignItems": "baseline", "flexWrap": "wrap", "gap": "8px"}}>
             <div style={{"fontSize": "28px", "fontWeight": "800", "letterSpacing": "-0.5px"}}>{v.selName}</div>
-            <div style={{"fontSize": "14px", "fontWeight": "600", "color": "#475569"}}>Used in <span style={{"color": "#1D4ED8", "fontWeight": "800"}}>{v.selCount}</span> of 3 projects</div>
+            <div style={{"fontSize": "14px", "fontWeight": "600", "color": "#475569"}}>Used in <span style={{"color": "#1D4ED8", "fontWeight": "800"}}>{v.selCount}</span> of 4 projects</div>
           </div>
           <div style={{"height": "6px", "background": "#EEF2F7", "borderRadius": "99px", "margin": "16px 0 22px", "overflow": "hidden"}}><div style={css(v.selFill)}></div></div>
           <div style={{"display": "flex", "flexDirection": "column", "gap": "12px"}}>
@@ -338,13 +385,18 @@ function Template({ v }) {
     </div>
     <div style={{"display": "flex", "flexWrap": "wrap", "gap": "32px", "marginTop": "44px"}}>
       <div className={"st"} style={{"flex": "1 1 560px", "minWidth": "0", "borderRadius": "16px", "background": "#06142B", "color": "#C7D2E5", "padding": "26px", "boxSizing": "border-box", "fontFamily": "'JetBrains Mono', monospace", "fontSize": "14px"}}>
-        <div style={{"color": "#67E8F9"}}>SELECT * FROM aditya;</div>
+        <div style={{"display": "flex", "alignItems": "center", "gap": "8px", "flexWrap": "wrap", "marginBottom": "16px"}}>
+          <span style={{"fontFamily": "Manrope, sans-serif", "fontSize": "11px", "fontWeight": "800", "letterSpacing": "1.5px", "textTransform": "uppercase", "color": "#7F93B5", "marginRight": "4px"}}>Run a query</span>
+          {(v.qPills || []).map((q, _i0) => (<React.Fragment key={_i0}><button className={"v-qpill"} type={"button"} onClick={q.pick} style={css(q.style)}>{q.label}</button></React.Fragment>))}
+        </div>
+        <div style={{"color": "#67E8F9", "minHeight": "21px", "whiteSpace": "pre-wrap", "wordBreak": "break-word", "lineHeight": "1.5"}}>{v.qTyped}<span className={"v-caret"}></span></div>
         <div style={{"marginTop": "16px", "borderTop": "1px solid #1E3A5F"}}>
-          {(v.profile || []).map((r, _i0) => (<React.Fragment key={_i0}>
-            <div className={"v-row"} style={css(r.style)}><span style={{"color": "#7F93B5", "width": "130px", "flex": "none"}}>{r.k}</span><span style={{"color": "#FFFFFF", "minWidth": "0"}}>{r.v}</span></div>
+          <div style={css(v.qHead)}><span style={css(v.qKeyStyle)}>{v.qCol1}</span><span>{v.qCol2}</span></div>
+          {(v.qRows || []).map((r, _i0) => (<React.Fragment key={_i0}>
+            <div className={r.cls} onClick={r.go} style={css(r.style)}><span className={r.kCls} style={css(r.kStyle)}>{r.k}</span><span style={{"color": "#FFFFFF", "minWidth": "0", "flex": "1"}}>{r.v}</span><span className={"v-qarr"} style={css(r.arrStyle)}>→</span></div>
           </React.Fragment>))}
         </div>
-        <div style={{"color": "#5E7398", "marginTop": "14px", "fontSize": "12px"}}>9 rows returned</div>
+        <div style={{"color": "#5E7398", "marginTop": "14px", "fontSize": "12px"}}>{v.qCount}</div>
       </div>
       <div className={"st"} style={{"flex": "1 1 360px", "minWidth": "0", "display": "grid", "gridTemplateColumns": "repeat(2, minmax(0, 1fr))", "gap": "16px"}}>
         {(v.rings || []).map((rg, _i0) => (<React.Fragment key={_i0}>
@@ -491,7 +543,7 @@ class Portfolio extends DCLogic {
       }, { root, threshold: 0, rootMargin: '140px 0px 140px 0px' });
       Object.keys(this.els).forEach((k) => { this.ioIn.observe(this.els[k]); this.ioOut.observe(this.els[k]); });
     } catch (e) {
-      const seen = {}; ['impact','workHead','p1','p2','p3','skills','process','about','contact','hero','m1','c2','m2','c3','m3','res','jr'].forEach((k) => { seen[k] = Date.now(); });
+      const seen = {}; ['impact','workHead','p1','p2','p3','p4','skills','process','about','contact','hero','m1','c2','m2','c3','m3','c5','m5','res','jr'].forEach((k) => { seen[k] = Date.now(); });
       this.setState({ seen });
     }
   }
@@ -718,7 +770,8 @@ class Portfolio extends DCLogic {
     let active = 'top';
     ['work', 'skills', 'process', 'about', 'contact'].forEach((id) => { const s = document.getElementById(id); if (s && s.getBoundingClientRect().top <= 200) active = id; });
     let proj = 0;
-    ['p1', 'p2', 'p3'].forEach((id, i) => { const s = document.getElementById(id); if (s && s.getBoundingClientRect().top < window.innerHeight * 0.5) proj = i; });
+    ['p1', 'p2', 'p3', 'p4'].forEach((id, i) => { const s = document.getElementById(id); if (s && s.getBoundingClientRect().top < window.innerHeight * 0.5) proj = i; });
+    document.querySelectorAll('.v-ghost').forEach((g) => { const r = g.parentElement.getBoundingClientRect(); g.style.translate = '0 ' + ((r.top - window.innerHeight * 0.3) * -0.12).toFixed(1) + 'px'; });
     const S = this.S();
     if (S.scrollTop !== sTop || S.active !== active || S.proj !== proj) this.setState({ scrollTop: sTop, progress: Math.min(1, sTop / max), active, proj });
   }
@@ -806,16 +859,16 @@ class Portfolio extends DCLogic {
     const pp = this.pipe || { inN: 0, bad: 0, good: 0 };
 
     const cls = {};
-    ['impact','workHead','p1','p2','p3','skills','process','about','contact'].forEach((k) => { cls[k] = 'rv' + (seen[k] ? ' in' : ''); });
-    ['m1','c2','m2','c3','m3','res','jr'].forEach((k) => { cls[k] = 'tr' + (seen[k] ? ' in2' : ''); });
+    ['impact','workHead','p1','p2','p3','p4','skills','process','about','contact'].forEach((k) => { cls[k] = 'rv' + (seen[k] ? ' in' : ''); });
+    ['m1','c2','m2','c3','m3','c5','m5','res','jr'].forEach((k) => { cls[k] = 'tr' + (seen[k] ? ' in2' : ''); });
 
     // ---------- impact ----------
     const ei = this.ease(seen.impact, 1800);
     const impact = [
-      [fmt(3 * ei), 'Projects', 'M3 7h6l2 2h10v10H3z'],
-      [fmt(40 * ei) + 'k+', 'Records analysed', 'M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6'],
-      [fmt(1 * ei), 'Live AI app', 'M13 2L4 14h7l-1 8 9-12h-7z'],
-      [fmt(1 * ei), 'Springer research paper', 'M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3zM18 20h2V6'],
+      [fmt(4 * ei), 'Projects', 'M3 7h6l2 2h10v10H3z'],
+      [fmt(45 * ei) + 'k+', 'Records analysed', 'M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zM4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6'],
+      ['ProductIQ', 'Live AI app', 'M13 2L4 14h7l-1 8 9-12h-7z'],
+      ['Springer', 'Published research', 'M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3zM18 20h2V6'],
       ['₹' + fmt(1 * ei) + ' Cr', 'Investment plan recommended', 'M7 4h10M7 9h10M7 4c5 0 5 5 0 5l8 11']
     ].map((k, i) => ({ v: k[0], l: k[1], icon: k[2],
       style: 'display:flex;align-items:center;gap:14px;background:#FFFFFF;border:1px solid #E5E9F0;border-radius:14px;padding:16px 18px;box-shadow:0 24px 50px -40px rgba(10,37,64,.5);transition-delay:' + (i * 0.08).toFixed(2) + 's' }));
@@ -823,7 +876,7 @@ class Portfolio extends DCLogic {
     const tools2 = ['Data cleaning', 'Data validation', 'CTEs', 'Window functions', 'Pivot tables', 'XLOOKUP', 'Churn analysis', 'Customer lifetime value', 'Segmentation', 'Correlation analysis', 'KPI dashboards', 'Anomaly detection', 'Business recommendations'];
 
     // ---------- projects ----------
-    const projNames = [['p1', 'ProductIQ'], ['p2', 'AstroSage Call Centre'], ['p3', 'Chinook Music Store']];
+    const projNames = [['p1', 'ProductIQ'], ['p2', 'Columbia Asia Hospital'], ['p3', 'Chinook Music Store'], ['p4', 'AstroSage Call Centre']];
     const projList = projNames.map((p, i) => {
       const on = st.proj === i;
       return { href: '#' + p[0], name: p[1], n: '0' + (i + 1), go: this.go(p[0]),
@@ -851,6 +904,22 @@ class Portfolio extends DCLogic {
       style: 'height:100%;width:' + a[1] + '%;background:' + allocCols[i] + ';animation-delay:' + (i * 0.15).toFixed(2) + 's',
       dot: 'width:10px;height:10px;border-radius:3px;flex:none;background:' + allocCols[i] }));
     const e3 = this.ease(seen.m3, 1300);
+    const e5 = this.ease(seen.m5, 1300);
+    const CASH = [['/images/columbia-main-overview.jpg', 'Main overview', 'Columbia Asia Power BI report: hospital overview with visits, revenue, wait time and satisfaction'],
+      ['/images/columbia-doctor-performance.jpg', 'Doctor view', 'Columbia Asia Power BI report: doctor view with patients, revenue and satisfaction'],
+      ['/images/columbia-patient-profile.jpg', 'Patient view', 'Columbia Asia Power BI report: one patient compared with department and hospital averages'],
+      ['/images/columbia-discounts-shifts.jpg', 'Discounts & shifts', 'Columbia Asia Power BI report: visits by hour, discount rules and workload per doctor']];
+    const cc = st.manualShot2 ? st.shot2 : Math.floor(st.tick / 2) % CASH.length;
+    const caShots = CASH.map((x, i) => ({ src: x[0], alt: x[2], style: 'opacity:' + (i === cc ? 1 : 0) + ';transform:translateX(' + (i === cc ? 0 : i < cc ? -6 : 6) + '%)' }));
+    const caTabs = CASH.map((x, i) => ({ label: x[1], pick: () => this.setState({ manualShot2: true, shot2: i }),
+      style: 'font-family:inherit;min-height:38px;padding:0 15px;border-radius:999px;font-size:13px;font-weight:700;cursor:pointer;border:1.5px solid ' + (i === cc ? '#0A2540' : '#D5DCE6') + ';background:' + (i === cc ? '#0A2540' : '#FFFFFF') + ';color:' + (i === cc ? '#FFFFFF' : '#0A2540') }));
+    const caDepts = [['General Practice', 7240], ['Orthopedics', 995], ['Physiotherapy', 276], ['Cardiology', 248], ['Neurology', 193], ['Gastroenterology', 178], ['Renal', 86]].map((d, i) => ({ name: d[0], v: fmt(d[1]),
+      nameStyle: 'width:118px;flex:none;font-size:12px;font-weight:' + (i === 0 ? 800 : 600) + ';color:' + (i === 0 ? '#0A2540' : '#475569'),
+      style: 'height:100%;border-radius:3px;background:' + (i === 0 ? '#1D4ED8' : '#0A2540') + ';width:' + Math.max(1.2, d[1] / 7240 * 100).toFixed(1) + '%;animation-delay:' + (i * 0.08).toFixed(2) + 's' }));
+    const caRecs = [['1', 'Hire 3 doctors', '2 in General Practice and 1 in Orthopedics, the department that brings the most revenue (34.0%).'],
+      ['2', 'Run General Practice in two shifts', '10:00 to 22:00 and 22:00 to 10:00. Visits are nearly flat all day, so the shifts get 3,573 and 3,667 visits.'],
+      ['3', 'Start with two discounts', 'Patients who waited 50+ minutes (2,036) and patients aged 61+ (2,198). 10% off costs 11.6M and 11.4M.']]
+      .map((r) => ({ n: r[0], title: r[1], text: r[2], numStyle: 'flex:none;width:24px;height:24px;border-radius:50%;background:#F1F5FE;color:#1D4ED8;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;margin-top:1px' }));
 
     // ---------- skills ----------
     const IC = {
@@ -860,36 +929,36 @@ class Portfolio extends DCLogic {
       biz: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM12 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2z',
       tool: 'M6 3v12M18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9a9 9 0 0 1-9 9'
     };
-    const P = ['ProductIQ', 'AstroSage', 'Chinook'];
+    const P = ['ProductIQ', 'Columbia Asia', 'Chinook', 'AstroSage'];
     const IC2 = { com: 'M4 5h16v11H8l-4 4zM8 9h8M8 12h5' };
     const data = [
       ['Data & querying', IC.db, [
-        ['SQL / MySQL', { ProductIQ: 'Stored the sales data, KPIs and AI results in MySQL tables', Chinook: 'Churn, lifetime value and risk queries across 11 tables' }],
-        ['Window functions', { Chinook: 'RANK, ROW_NUMBER and SUM OVER for rankings and shares' }],
-        ['Data cleaning', { ProductIQ: 'Detects messy column names and keeps thin data out of the matrix', AstroSage: 'Fixed formats and missing values across 28,027 rows', Chinook: 'Checked every table for NULLs and duplicates' }]]],
+        ['SQL / MySQL', { ProductIQ: 'Stored the sales data, KPIs and AI results in MySQL tables', 'Columbia Asia': 'Joined 2 tables in a view, 5 data checks and 7 analysis queries', Chinook: 'Churn, lifetime value and risk queries across 11 tables' }],
+        ['Window functions', { 'Columbia Asia': 'LAG for 3-month wait trends, RANK for doctor patient mix', Chinook: 'RANK, ROW_NUMBER and SUM OVER for rankings and shares' }],
+        ['Data cleaning', { ProductIQ: 'Detects messy column names and keeps thin data out of the matrix', 'Columbia Asia': 'Fixed day-first dates and kept 6,699 blank scores as blank, not zero', AstroSage: 'Fixed formats and missing values across 28,027 rows', Chinook: 'Checked every table for NULLs and duplicates' }]]],
       ['Analysis & BI', IC.bi, [
-        ['Power BI', { ProductIQ: 'Two-page interactive dashboard with category and region filters' }],
-        ['Power Query', { ProductIQ: 'Prepared and shaped the data for the dashboard' }],
-        ['DAX', { ProductIQ: 'KPI measures such as revenue, profit and margin' }],
+        ['Power BI', { ProductIQ: 'Two-page interactive dashboard with category and region filters', 'Columbia Asia': '8-page report with hospital, doctor and patient views' }],
+        ['Power Query', { ProductIQ: 'Prepared and shaped the data for the dashboard', 'Columbia Asia': 'Merged 2 tables and added age groups and wait-time bands' }],
+        ['DAX', { ProductIQ: 'KPI measures such as revenue, profit and margin', 'Columbia Asia': '36 measures, a date table and a discount rules table' }],
         ['Excel', { AstroSage: 'Pivot tables, formulas, slicers and an interactive dashboard' }],
-        ['Dashboards', { ProductIQ: 'Streamlit app and Power BI report', AstroSage: '7 KPIs and 12 charts with slicers' }]]],
+        ['Dashboards', { ProductIQ: 'Streamlit app and Power BI report', 'Columbia Asia': 'Three views, one each for management, doctors and patient care', AstroSage: '7 KPIs and 12 charts with slicers' }]]],
       ['Code & AI', IC.code, [
         ['Python', { ProductIQ: 'App logic in pandas, connected to MySQL' }],
         ['Streamlit', { ProductIQ: 'Built and deployed the live app' }],
         ['Plotly', { ProductIQ: 'Interactive bar and scatter charts' }],
         ['Gemini API', { ProductIQ: 'Structured prompts turned into strategy cards' }]]],
       ['Business thinking', IC.biz, [
-        ['Customer analytics', { AstroSage: 'Found that 46% of callers come back', Chinook: 'Risk segments and 5-year lifetime value' }],
-        ['Correlation analysis', { AstroSage: 'Call duration vs customer rating' }],
-        ['Recommendations', { ProductIQ: 'Invest, harvest or drop for each product', AstroSage: '₹1 crore split across 5 areas', Chinook: 'Retention and regional actions' }]]],
+        ['Customer analytics', { 'Columbia Asia': 'Satisfaction by age, wait time, race and gender', AstroSage: 'Found that 46% of callers come back', Chinook: 'Risk segments and 5-year lifetime value' }],
+        ['Correlation analysis', { 'Columbia Asia': 'Wait time vs satisfaction: about -0.02, so no real link', AstroSage: 'Call duration vs customer rating' }],
+        ['Recommendations', { ProductIQ: 'Invest, harvest or drop for each product', 'Columbia Asia': '3 new doctors, two shifts and two costed discounts', AstroSage: '₹1 crore split across 5 areas', Chinook: 'Retention and regional actions' }]]],
       ['Communication', IC2.com, [
-        ['Reports & presentations', { AstroSage: 'Written report and presentation deck', Chinook: 'Written report and presentation deck' }]]],
+        ['Reports & presentations', { 'Columbia Asia': 'Written findings and a presentation deck', AstroSage: 'Written report and presentation deck', Chinook: 'Written report and presentation deck' }]]],
       ['Tools & workflow', IC.tool, [
-        ['GitHub', { ProductIQ: 'Code, Power BI file, README and screenshots', AstroSage: 'Workbook, report and presentation', Chinook: 'SQL file, report and presentation' }],
+        ['GitHub', { ProductIQ: 'Code, Power BI file, README and screenshots', 'Columbia Asia': 'SQL, Power BI file, DAX measures, data dictionary and findings', AstroSage: 'Workbook, report and presentation', Chinook: 'SQL file, report and presentation' }],
         ['Google Sheets', { Chinook: '10+ charts built from query results' }]]]
     ];
     const flat = []; data.forEach((g) => g[2].forEach((s) => flat.push([s[0], s[1], g[1]])));
-    const si = st.manualSkill ? st.skill : st.tick % flat.length;
+    const si = st.manualSkill ? st.skill : Math.floor(st.tick / 2) % flat.length;
     const cur = flat[si];
     let used = 0;
     let idx = 0;
@@ -904,7 +973,7 @@ class Portfolio extends DCLogic {
     // ---------- process ----------
     const process = [
       ['01', 'Ask', 'Turn a vague goal into one clear business question.', 'Where should a ₹1 crore call-centre investment go?'],
-      ['02', 'Clean', 'Fix missing values, duplicates and formats before any analysis.', 'Cleaned 28,027 AstroSage records in Excel.'],
+      ['02', 'Clean', 'Fix missing values, duplicates and formats before any analysis.', 'Kept 6,699 blank hospital satisfaction scores as blank, not zero, so the averages stay honest.'],
       ['03', 'Analyse', 'Find the pattern with SQL, Excel, Power BI or Python.', 'Measured yearly churn in Chinook with a CTE and a self-join.'],
       ['04', 'Recommend', 'Say what to do next, and be clear about what the data cannot tell us.', 'Invest, harvest or drop for every product in ProductIQ.']
     ].map((p, i) => ({ n: p[0], title: p[1], text: p[2], ex: p[3],
@@ -912,8 +981,35 @@ class Portfolio extends DCLogic {
       titleStyle: 'font-size:26px;font-weight:800;margin-top:6px;animation-delay:' + (0.3 + i * 1.4).toFixed(1) + 's' }));
 
     // ---------- about ----------
-    const profile = [['name', 'Aditya Jadhav'], ['role', 'Data Analyst'], ['based_in', 'Maharashtra, India'], ['open_to', 'Relocation, remote work'], ['tools', 'SQL, Excel, Power BI, Python'], ['shipped', 'ProductIQ (live AI app)'], ['research', 'Paper published by Springer'], ['leadership', 'Project lead, team of 5'], ['looking_for', 'Data Analyst roles']]
+    const profile = [['name', 'Aditya Jadhav'], ['role', 'Data Analyst'], ['based_in', 'Maharashtra, India'], ['open_to', 'Relocation, remote work'], ['tools', 'SQL, Power BI, DAX, Excel, Python'], ['shipped', 'ProductIQ (live AI app)'], ['research', 'Paper published by Springer'], ['leadership', 'Project lead, team of 5'], ['looking_for', 'Data Analyst roles']]
       .map((r, i) => ({ k: r[0], v: r[1], style: 'display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #1E3A5F;animation-delay:' + (0.2 + i * 0.12).toFixed(2) + 's' }));
+    // ---------- query console ----------
+    const skillTop = flat.map((x, k) => [x[0], Object.keys(x[1]).length, k]).sort((a, b) => b[1] - a[1] || a[2] - b[2]).slice(0, 5);
+    const QUERIES = [
+      { label: 'my profile', sql: 'SELECT * FROM aditya;', key: '130px', head: null, rows: profile.map((r) => [r.k, r.v]) },
+      { label: 'projects', sql: 'SELECT project, tools FROM projects;', key: 'min(48%, 230px)', head: ['project', 'tools'],
+        rows: [['ProductIQ', 'Python, MySQL, Power BI, Gemini API', 'p1'], ['Columbia Asia Hospital', 'MySQL, Power BI, DAX, Power Query', 'p2'], ['Chinook Music Store', 'MySQL, CTEs, window functions', 'p3'], ['AstroSage Call Centre', 'Excel, pivot tables, dashboard', 'p4']] },
+      { label: 'key results', sql: 'SELECT project, key_result FROM projects;', key: 'min(48%, 230px)', head: ['project', 'key_result'],
+        rows: [['ProductIQ', '1,131 of 1,850 products classified in under 30s', 'p1'], ['Columbia Asia Hospital', '78.6% of 9,216 visits go to one department', 'p2'], ['Chinook Music Store', '15 medium-risk customers flagged for retention', 'p3'], ['AstroSage Call Centre', '₹1 crore investment split across 5 areas', 'p4']] },
+      { label: 'top skills', sql: 'SELECT skill, COUNT(*) AS projects FROM skills_used GROUP BY skill ORDER BY projects DESC LIMIT 5;', key: 'min(48%, 230px)', head: ['skill', 'projects'],
+        rows: skillTop.map((x) => [x[0], x[1] + ' of 4']) }
+    ];
+    const qi = st.q || 0, Q = QUERIES[qi];
+    const qEl = st.qStart ? Date.now() - st.qStart : 1e9;
+    const typeMs = Q.sql.length * 18;
+    const qPills = QUERIES.map((q, i) => ({ label: q.label,
+      pick: () => { this._seenAt = Date.now() + 1500; this.setState({ q: i, qStart: Date.now(), qRun: (st.qRun || 0) + 1 }); },
+      style: "font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;min-height:32px;padding:0 11px;border-radius:999px;border:1px solid " + (i === qi ? 'rgba(103,232,249,.7)' : 'rgba(255,255,255,.16)') + ';background:' + (i === qi ? 'rgba(103,232,249,.14)' : 'transparent') + ';color:' + (i === qi ? '#A5F3FC' : '#C7D2E5') }));
+    const rowCls = st.qRun ? (st.qRun % 2 ? 'v-row2' : 'v-row') : 'v-row';
+    const qRows = Q.rows.map((r, i) => ({ k: r[0], v: r[1],
+      cls: rowCls + (r[2] ? ' v-qlink' : ''),
+      go: r[2] ? this.go(r[2]) : undefined,
+      kCls: Q.head ? 'v-qkey' : '',
+      kStyle: 'color:#7F93B5;flex:none;width:' + Q.key,
+      arrStyle: 'color:#67E8F9;flex:none;margin-left:8px;' + (r[2] ? '' : 'display:none'),
+      style: 'display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid #1E3A5F;animation-delay:' + (st.qStart ? (typeMs / 1000 + 0.1 + i * 0.08) : (0.2 + i * 0.12)).toFixed(2) + 's' }));
+    const qTyped = st.qStart ? Q.sql.slice(0, Math.floor(qEl / 18)) : Q.sql;
+    const qDone = !st.qStart || qEl >= typeMs;
     const ringOn = !!seen.about;
     const rings = [
       { v: '84.46%', unit: 'SCORE', title: 'Diploma, Computer Engineering', sub: 'D.Y. Patil Polytechnic · 2022', badge: 'College Topper', pct: 0.8446 },
@@ -929,7 +1025,7 @@ class Portfolio extends DCLogic {
       ['2025', 'B.Tech, Computer Science & Engineering', 'D.Y. Patil College of Engineering & Technology', '', false],
       ['2025', 'Scientific Assistant (Data Analysis)', 'Regional Forensic Science Laboratory · data validation and reporting', '', false],
       ['2025', 'Research paper published by Springer', 'AI chatbot for university support', 'Project lead', false],
-      ['2026', 'Data analytics projects', 'SQL, Excel, Power BI and Python', '', false],
+      ['2026', 'Four data analytics projects', 'SQL, Power BI, Excel and Python', '', false],
       ['Next', 'Data Analyst role', 'Open to relocate', '', true]
     ].map((r, i) => ({ year: r[0], title: r[1], place: r[2], badge: r[3],
       node: 'position:absolute;left:-44px;top:2px;width:24px;height:24px;border-radius:50%;box-sizing:border-box;transition-delay:' + (0.15 + i * 0.38).toFixed(2) + 's;' + (r[4] ? 'background:#1D4ED8;border:4px solid #DBE6FD' : 'background:#FFFFFF;border:3px solid #1D4ED8') }));
@@ -984,21 +1080,27 @@ class Portfolio extends DCLogic {
       caption: captions[stage], sqlTyped: typed,
       cls, impact, tools: tools.concat(tools), tools2: tools2.concat(tools2),
       refHero: this.mkRef('hero'), refImpact: this.mkRef('impact'), refWorkHead: this.mkRef('workHead'),
-      refP1: this.mkRef('p1'), refP2: this.mkRef('p2'), refP3: this.mkRef('p3'),
+      refP1: this.mkRef('p1'), refP2: this.mkRef('p2'), refP3: this.mkRef('p3'), refP4: this.mkRef('p4'),
       refSkills: this.mkRef('skills'), refProcess: this.mkRef('process'), refAbout: this.mkRef('about'), refContact: this.mkRef('contact'),
-      projList, projProgress: 'height:100%;background:#1D4ED8;transition:width .5s;width:' + ((st.proj + 1) / 3 * 100).toFixed(1) + '%', projCounter: '0' + (st.proj + 1) + ' / 03',
+      projList, projProgress: 'height:100%;background:#1D4ED8;transition:width .5s;width:' + ((st.proj + 1) * 25) + '%', projCounter: '0' + (st.proj + 1) + ' / 04',
       p1a: fmt(9994 * e1), p1b: fmt(1850 * e1), frameUrl: SH[cs][3], p1c: Math.round(30 * e1), tabs, tabText: tabContent[st.tab], shots, shotTabs,
       p2a: fmt(28027 * e2), p2b: Math.round(46 * e2), p2c: Math.round(79 * e2), peaks, alloc,
+      caShots, caTabs, caDepts, caRecs, caPage: CASH[cc][1], p5a: fmt(9216 * e5), p5b: (78.6 * e5).toFixed(1), p5c: (35.26 * e5).toFixed(2),
+      tilt3: tiltFn(3), untilt3: () => this.setState({ tilt3: null }), tiltStyle3: tiltOf(3),
       p3a: fmt(59 * e3), p3b: fmt(24 * e3), p3c: (53.38 * e3).toFixed(1),
       groups, projRows, selName: cur[0], selCount: used,
-      selFill: 'height:100%;background:#1D4ED8;border-radius:99px;transition:width .7s cubic-bezier(.2,.7,.2,1);width:' + (used / 3 * 100).toFixed(1) + '%',
+      selFill: 'height:100%;background:#1D4ED8;border-radius:99px;transition:width .7s cubic-bezier(.2,.7,.2,1);width:' + (used / 4 * 100).toFixed(1) + '%',
       process, profile, rings, qualities, journey,
+      qPills, qRows, qTyped,
+      qCount: qDone ? Q.rows.length + ' rows returned' + (Q.rows[0][2] ? '  ·  click a project to jump to it' : '') : 'running…',
+      qHead: Q.head ? 'display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #1E3A5F;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5E7398' : 'display:none',
+      qKeyStyle: 'flex:none;width:' + Q.key, qCol1: Q.head ? Q.head[0] : '', qCol2: Q.head ? Q.head[1] : '',
       contactWords: mkWords('Have a question your data should answer?', ['data', 'answer?'], 0.1, 0.07, !!seen.contact),
       copyLabel: st.copied ? 'Copied' : 'Copy',
       codeLines,
       tilt1: tiltFn(1), untilt1: () => this.setState({ tilt1: null }), tiltStyle1: tiltOf(1),
       tilt2: tiltFn(2), untilt2: () => this.setState({ tilt2: null }), tiltStyle2: tiltOf(2),
-      refM1: this.mkRef('m1'), refC2: this.mkRef('c2'), refM2: this.mkRef('m2'), refC3: this.mkRef('c3'), refM3: this.mkRef('m3'), refRes: this.mkRef('res'), refJr: this.mkRef('jr'),
+      refM1: this.mkRef('m1'), refC2: this.mkRef('c2'), refM2: this.mkRef('m2'), refC3: this.mkRef('c3'), refM3: this.mkRef('m3'), refC5: this.mkRef('c5'), refM5: this.mkRef('m5'), refRes: this.mkRef('res'), refJr: this.mkRef('jr'),
       goResume: (ev) => { this.go('contact')(ev); this.setState({ flash: Date.now() }); },
       resumeCls: 'v-btn' + (st.flash && Date.now() - st.flash < 2600 ? ' v-flash' : ''),
       resumeLabel: 'Download Resume',
