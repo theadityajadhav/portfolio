@@ -37,10 +37,34 @@ a:focus-visible, button:focus-visible { outline: 3px solid #22D3EE; outline-offs
 
 /* laptop screens (short browser windows): fit the whole hero, data pipeline included, on the first screen */
 @media (min-width: 900px) and (max-height: 939px) {
-  .v-herobox { padding: 96px 32px 196px !important; gap: 44px !important; }
-  #top h1 { font-size: clamp(42px, 4.6vw, 60px) !important; letter-spacing: -2.4px !important; }
-  #top .v-herobox > div:first-child > p:nth-of-type(2) { margin-top: 20px !important; font-size: 17px !important; }
-  #top .v-herobox > div:first-child > div:nth-of-type(1) { margin-top: 26px !important; }
-  #top .v-herobox > div:first-child > div:nth-of-type(2) { margin-top: 26px !important; }
-  .v-demo { zoom: 0.8; }
+  .v-herobox { padding: 96px 32px 196px !important; }
+  #top h1 { font-size: clamp(44px, 6vw, 82px) !important; }
+}
+
+
+/* phones: highlights as a 2-column grid, tighter section spacing */
+@media (max-width: 560px) {
+  div:has(> .v-imp) { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 10px !important; }
+  .v-imp { padding: 12px !important; gap: 10px !important; min-width: 0; }
+  .v-imp > div:last-child { min-width: 0; }
+  .v-imp > div:last-child > div:first-child { font-size: 19px !important; letter-spacing: -0.4px !important; }
+  .v-imp .v-ic { display: none !important; }
+  .v-imp:last-child { grid-column: span 2; }
+  .v-imp .v-ic { width: 34px !important; height: 34px !important; }
+  #work { padding-top: 56px !important; }
+  #skills > div { padding-top: 72px !important; padding-bottom: 72px !important; }
+  #process { padding-top: 72px !important; }
+  #about { padding-top: 80px !important; }
+  #contact { margin-top: 80px !important; }
+  #contact > div[class] { padding-top: 84px !important; }
+}
+
+/* phones: demo table columns fit the narrow screen (flagged rows are already marked red and struck through) */
+@media (max-width: 560px) {
+  .v-rec > span:nth-child(1), .v-thead > span:nth-child(1) { width: 52px; }
+  .v-rec > span:nth-child(2), .v-thead > span:nth-child(2) { padding-left: 10px; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .v-rec > span:nth-child(3), .v-thead > span:nth-child(3) { width: 72px; }
+  .v-rec > span:nth-child(4) { display: none; }
+  .v-thead::after { display: none; }
+  .v-thead { letter-spacing: .5px !important; }
 }

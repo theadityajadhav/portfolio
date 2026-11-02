@@ -59,60 +59,18 @@ function Template({ v }) {
     <div aria-hidden={"true"} className={"v-blob v-b2"} style={{"width": "480px", "height": "480px", "right": "-120px", "bottom": "-160px", "background": "rgba(34,211,238,.18)"}}></div>
 
     <div className={"v-herobox"} style={{"position": "relative", "maxWidth": "1240px", "width": "100%", "margin": "0 auto", "padding": "118px 32px 250px", "boxSizing": "border-box", "display": "flex", "flexWrap": "wrap", "gap": "56px", "alignItems": "center", "pointerEvents": "none"}}>
-      <div style={{"flex": "1 1 480px", "minWidth": "0", "pointerEvents": "auto"}}>
+      <div style={{"flex": "0 1 900px", "minWidth": "0", "pointerEvents": "auto"}}>
         <p className={"v-fade"} style={{"margin": "0 0 24px", "fontFamily": "'JetBrains Mono', monospace", "fontSize": "13px", "color": "#67E8F9", "letterSpacing": "1px", "animationDelay": ".2s"}}>&gt; SELECT insight FROM data<span className={"v-caret"}></span></p>
-        <h1 style={{"margin": "0", "fontSize": "clamp(42px, 6vw, 74px)", "lineHeight": "1.02", "fontWeight": "800", "letterSpacing": "-3px"}}>
+        <h1 style={{"margin": "0", "fontSize": "clamp(44px, 7vw, 96px)", "lineHeight": "1.0", "fontWeight": "800", "letterSpacing": "-3.5px"}}>
           {(v.heroWords || []).map((w, _i0) => (<React.Fragment key={_i0}><span className={"v-mask"}><span className={w.cls} style={css(w.style)}>{w.t}</span></span> </React.Fragment>))}
         </h1>
-        <p className={"v-fade"} style={{"margin": "28px 0 0", "fontSize": "19px", "lineHeight": "1.65", "color": "#A9B8D3", "maxWidth": "520px", "animationDelay": "1.1s"}}>I'm Aditya, a data analyst from Maharashtra, India. I clean messy data, find what is really going on, and tell the business what to do next. I work with SQL, Excel, Power BI and Python.</p>
+        <p className={"v-fade"} style={{"margin": "28px 0 0", "fontSize": "20px", "lineHeight": "1.6", "color": "#A9B8D3", "maxWidth": "560px", "animationDelay": "1.1s"}}>I'm Aditya, a data analyst from Maharashtra. I clean messy data, find what is really going on, and tell the business what to do next.</p>
         <div className={"v-fade"} style={{"display": "flex", "gap": "14px", "marginTop": "36px", "flexWrap": "wrap", "animationDelay": "1.3s"}}>
           <a className={"v-btn"} href={"#work"} onClick={v.goWork} style={{"display": "inline-flex", "alignItems": "center", "gap": "8px", "minHeight": "52px", "padding": "0 26px", "background": "#FFFFFF", "color": "#06142B", "borderRadius": "8px", "fontWeight": "800", "fontSize": "15px", "textDecoration": "none"}}>See my projects <span className={"v-arr"}>→</span></a>
           <a className={"v-btn"} href={"#contact"} onClick={v.goContact} style={{"display": "inline-flex", "alignItems": "center", "minHeight": "52px", "padding": "0 26px", "border": "1.5px solid rgba(255,255,255,.3)", "color": "#FFFFFF", "borderRadius": "8px", "fontWeight": "700", "fontSize": "15px", "textDecoration": "none"}}>Get in touch</a>
         </div>
-        <div className={"v-fade"} style={{"display": "flex", "gap": "22px", "marginTop": "40px", "fontSize": "13px", "color": "#7F93B5", "flexWrap": "wrap", "animationDelay": "1.5s"}}>
-          <span>Maharashtra, India</span><span>·</span><span>Open to relocate</span><span>·</span><span>Research published by Springer</span>
-        </div>
-      </div>
-
-      <div className={"v-fade v-demo"} style={{"flex": "1 1 540px", "minWidth": "0", "pointerEvents": "auto", "animationDelay": ".6s"}}>
-        <div style={{"border": "1px solid rgba(255,255,255,.12)", "borderRadius": "18px", "padding": "22px", "boxSizing": "border-box", "background": "rgba(10,28,58,.72)", "backdropFilter": "blur(14px)", "boxShadow": "0 40px 80px -40px rgba(0,0,0,.8)"}}>
-          <div style={{"display": "flex", "justifyContent": "space-between", "alignItems": "center", "gap": "10px", "flexWrap": "wrap"}}>
-            <div style={{"fontSize": "12px", "fontWeight": "700", "letterSpacing": "2px", "textTransform": "uppercase", "color": "#7F93B5"}}>Live analysis · how I work</div>
-            <div style={{"fontSize": "11px", "color": "#5E7398"}}>Illustrative sample data</div>
-          </div>
-          <div style={{"display": "grid", "gridTemplateColumns": "repeat(4, minmax(0, 1fr))", "gap": "8px", "marginTop": "14px"}}>
-            {(v.stagePills || []).map((s, _i0) => (<React.Fragment key={_i0}>
-              <button className={"v-pill"} type={"button"} onClick={s.pick} style={css(s.style)}><span style={css(s.numStyle)}>{s.n}</span>{s.label}<span style={css(s.fill)}></span></button>
-            </React.Fragment>))}
-          </div>
-
-          <div style={{"position": "relative", "height": "410px", "marginTop": "18px", "fontFamily": "'JetBrains Mono', monospace"}}>
-            <div className={"v-fx v-thead"} style={css(v.headerStyle)}><span>order_id</span><span>category</span><span>amount</span></div>
-            {(v.scanOn) ? (<><div className={"v-scan"}></div></>) : null}
-            {(v.recs || []).map((r, _i0) => (<React.Fragment key={_i0}>
-              <div className={"v-rec"} style={css(r.style)}><span>{r.id}</span><span>{r.cat}</span><span>{r.amt}</span><span style={css(r.flagStyle)}>{r.flag}</span></div>
-            </React.Fragment>))}
-            {(v.colLabels || []).map((l, _i0) => (<React.Fragment key={_i0}>
-              <div className={"v-fx"} style={css(l.style)}>
-                <div style={css(l.valStyle)}>{l.rev}</div>
-                <div style={{"fontFamily": "Manrope, sans-serif", "fontSize": "12px", "fontWeight": "700", "color": "#C7D2E5", "marginTop": "2px"}}>{l.name}</div>
-              </div>
-            </React.Fragment>))}
-            <div className={"v-fx"} style={css(v.decisionStyle)}>
-              <div style={{"fontFamily": "Manrope, sans-serif", "fontSize": "11px", "fontWeight": "800", "letterSpacing": "1.5px", "textTransform": "uppercase", "color": "#06142B", "opacity": ".7"}}>Recommendation</div>
-              <div style={{"fontFamily": "Manrope, sans-serif", "fontSize": "16px", "fontWeight": "800", "lineHeight": "1.4", "marginTop": "6px", "color": "#06142B"}}>{v.decisionText}</div>
-            </div>
-          </div>
-
-          <div style={{"borderTop": "1px solid rgba(255,255,255,.1)", "paddingTop": "14px", "display": "flex", "flexDirection": "column", "gap": "8px"}}>
-            <div style={{"fontSize": "15px", "fontWeight": "700", "color": "#FFFFFF", "minHeight": "21px"}}>{v.caption}</div>
-            <div style={{"fontFamily": "'JetBrains Mono', monospace", "fontSize": "12px", "color": "#67E8F9", "minHeight": "34px", "whiteSpace": "pre-wrap", "wordBreak": "break-word", "lineHeight": "1.45"}}>{v.sqlTyped}<span className={"v-caret"}></span></div>
-          </div>
-        </div>
       </div>
     </div>
-
-    <div aria-hidden={"true"} className={"v-fade"} style={{"position": "absolute", "left": "0", "right": "0", "bottom": "18px", "display": "flex", "justifyContent": "center", "gap": "8px", "fontFamily": "'JetBrains Mono', monospace", "fontSize": "11px", "color": "#5E7398", "animationDelay": "2.2s"}}><span>{v.pipeStats}</span></div>
   </section>
 
   <section ref={v.refImpact} className={v.cls.impact} style={{"maxWidth": "1240px", "margin": "0 auto", "padding": "0 32px", "boxSizing": "border-box", "position": "relative", "top": "-38px"}}>
@@ -171,8 +129,8 @@ function Template({ v }) {
               <span style={{"marginLeft": "10px", "flex": "1", "minWidth": "0", "padding": "5px 12px", "borderRadius": "6px", "background": "#FFFFFF", "fontSize": "12px", "color": "#475569", "overflow": "hidden", "whiteSpace": "nowrap", "textOverflow": "ellipsis"}}>{v.frameUrl}</span>
               <span style={{"fontSize": "11px", "fontWeight": "800", "color": "#059669", "display": "flex", "alignItems": "center", "gap": "6px"}}><span className={"v-pulse"} style={{"width": "7px", "height": "7px", "borderRadius": "50%", "background": "#34D399", "display": "inline-block"}}></span>LIVE</span>
             </div>
-            <div style={{"position": "relative", "aspectRatio": "1600 / 880", "overflow": "hidden", "background": "#FFFFFF"}}>
-              {(v.shots || []).map((sh, _i0) => (<React.Fragment key={_i0}><img loading={"lazy"} decoding={"async"} className={"v-shot"} src={sh.src} alt={sh.alt} style={css(sh.style)} /></React.Fragment>))}
+            <div className={"v-zoomable"} onClick={v.zoomShot1} style={{"position": "relative", "aspectRatio": "1600 / 880", "overflow": "hidden", "background": "#FFFFFF", "cursor": "zoom-in"}}>
+              {(v.shots || []).map((sh, _i0) => (<React.Fragment key={_i0}><img loading={"lazy"} decoding={"async"} className={"v-shot"} src={sh.src} alt={sh.alt} style={css(sh.style)} /></React.Fragment>))}<span className={"v-zoomhint"}>Click to enlarge</span>
             </div>
           </div></div>
           <div style={{"display": "flex", "gap": "8px", "marginTop": "14px", "flexWrap": "wrap"}}>
@@ -204,8 +162,8 @@ function Template({ v }) {
               <span style={{"marginLeft": "10px", "flex": "1", "minWidth": "0", "padding": "5px 12px", "borderRadius": "6px", "background": "#FFFFFF", "fontSize": "12px", "color": "#475569", "overflow": "hidden", "whiteSpace": "nowrap", "textOverflow": "ellipsis"}}>Power BI · columbia_asia_dashboard.pbix · {v.caPage}</span>
               <span style={{"fontSize": "11px", "fontWeight": "800", "color": "#475569"}}>8 PAGES</span>
             </div>
-            <div style={{"position": "relative", "aspectRatio": "1600 / 917", "overflow": "hidden", "background": "#FFFFFF"}}>
-              {(v.caShots || []).map((sh, _i0) => (<React.Fragment key={_i0}><img loading={"lazy"} decoding={"async"} className={"v-shot"} src={sh.src} alt={sh.alt} style={css(sh.style)} /></React.Fragment>))}
+            <div className={"v-zoomable"} onClick={v.zoomShot2} style={{"position": "relative", "aspectRatio": "1600 / 917", "overflow": "hidden", "background": "#FFFFFF", "cursor": "zoom-in"}}>
+              {(v.caShots || []).map((sh, _i0) => (<React.Fragment key={_i0}><img loading={"lazy"} decoding={"async"} className={"v-shot"} src={sh.src} alt={sh.alt} style={css(sh.style)} /></React.Fragment>))}<span className={"v-zoomhint"}>Click to enlarge</span>
             </div>
           </div></div>
           <div style={{"display": "flex", "gap": "8px", "marginTop": "14px", "flexWrap": "wrap"}}>
@@ -284,7 +242,7 @@ function Template({ v }) {
           <h3 className={"st"} style={{"margin": "10px 0 0", "fontSize": "clamp(32px, 4vw, 44px)", "fontWeight": "800", "letterSpacing": "-1.5px"}}>AstroSage Call Centre</h3>
           <p className={"st"} style={{"margin": "10px 0 0", "fontSize": "20px", "lineHeight": "1.5", "color": "#475569"}}>“Where should a ₹1 crore investment go?”</p>
           <div className={"v-tilt"} onMouseMove={v.tilt2} onMouseLeave={v.untilt2} style={css(v.tiltStyle2)}><div className={"v-frame"} style={{"marginTop": "30px", "borderRadius": "12px", "overflow": "hidden", "border": "1px solid #E5E9F0", "boxShadow": "0 40px 70px -40px rgba(10,37,64,.5)"}}>
-            <div style={{"aspectRatio": "2.35 / 1", "overflow": "hidden", "background": "#FFFFFF"}}><img loading={"lazy"} decoding={"async"} src={"/images/astrosage-excel-dashboard.jpg"} alt={"AstroSage Excel dashboard with KPIs and charts"} style={{"width": "100%", "height": "100%", "objectFit": "cover", "objectPosition": "center", "display": "block"}} /></div>
+            <div className={"v-zoomable"} onClick={v.zoomAstro} style={{"position": "relative", "aspectRatio": "2200 / 724", "overflow": "hidden", "background": "#FFFFFF", "cursor": "zoom-in"}}><img loading={"lazy"} decoding={"async"} src={"/images/astrosage-excel-dashboard.jpg"} alt={"AstroSage Excel dashboard with KPIs and charts"} style={{"width": "100%", "height": "100%", "objectFit": "contain", "display": "block"}} /><span className={"v-zoomhint"}>Click to enlarge</span></div>
           </div></div>
           <div ref={v.refC2} className={`st ${v.cls.c2}`} style={{"display": "grid", "gridTemplateColumns": "repeat(auto-fit, minmax(260px, 1fr))", "gap": "18px", "marginTop": "26px"}}>
             <div className={"v-hov"} style={{"border": "1px solid #E5E9F0", "borderRadius": "12px", "padding": "22px", "background": "#FFFFFF"}}>
@@ -359,21 +317,54 @@ function Template({ v }) {
       <span style={{"fontSize": "14px", "fontWeight": "800", "color": "#1D4ED8"}}>03</span>
       <h2 style={{"margin": "0", "fontSize": "clamp(36px, 4.6vw, 54px)", "fontWeight": "800", "letterSpacing": "-2px"}}>How I work</h2>
     </div>
-    <p className={"st"} style={{"margin": "12px 0 0", "fontSize": "18px", "color": "#475569"}}>The four steps I follow in every project.</p>
-    <div className={"v-procwrap"} style={{"position": "relative", "marginTop": "60px"}}>
-      <div style={{"position": "absolute", "left": "14px", "right": "14px", "top": "13px", "height": "2px", "background": "#E5E9F0"}}></div>
-      <div className={"v-hline"} style={{"position": "absolute", "left": "14px", "right": "14px", "top": "13px", "height": "2px", "background": "#1D4ED8"}}></div>
-      <div style={{"position": "absolute", "left": "14px", "right": "14px", "top": "0", "height": "30px"}}><span className={"v-traveler"}></span></div>
-      <div style={{"display": "grid", "gridTemplateColumns": "repeat(auto-fit, minmax(230px, 1fr))", "gap": "28px", "position": "relative"}}>
-        {(v.process || []).map((p, _i0) => (<React.Fragment key={_i0}>
-          <div>
-            <span className={"v-step-node"} style={css(p.node)}></span>
-            <div style={{"fontSize": "13px", "fontWeight": "800", "color": "#1D4ED8", "marginTop": "24px", "letterSpacing": "1px"}}>{p.n}</div>
-            <div className={"v-step-title"} style={css(p.titleStyle)}>{p.title}</div>
-            <div style={{"fontSize": "15px", "lineHeight": "1.6", "color": "#475569", "marginTop": "8px"}}>{p.text}</div>
-            <div style={{"marginTop": "14px", "padding": "14px", "background": "#F6F8FC", "borderRadius": "10px", "fontSize": "13px", "lineHeight": "1.55", "color": "#0A2540"}}><div style={{"fontSize": "11px", "fontWeight": "800", "letterSpacing": "1.5px", "color": "#1D4ED8", "marginBottom": "4px"}}>REAL EXAMPLE</div>{p.ex}</div>
-          </div>
+    <p className={"st"} style={{"margin": "12px 0 0", "fontSize": "18px", "color": "#475569", "maxWidth": "680px", "lineHeight": "1.6"}}>The four steps I follow in every project. Pick a step to see it run on sample data, and where I used it for real.</p>
+    <div ref={v.refDemo} className={"st v-how"} style={{"marginTop": "48px", "display": "flex", "flexWrap": "wrap", "gap": "40px", "alignItems": "flex-start"}}>
+      <div className={"v-howsteps"} style={{"flex": "1 1 380px", "minWidth": "0", "display": "flex", "flexDirection": "column", "gap": "12px"}}>
+        {(v.howSteps || []).map((h, _i0) => (<React.Fragment key={_i0}>
+          <button type={"button"} className={"v-howstep"} onClick={h.pick} aria-pressed={h.pressed} style={css(h.style)}>
+            <div style={{"display": "flex", "alignItems": "center", "gap": "14px"}}>
+              <span style={css(h.numStyle)}>{h.n}</span>
+              <span style={css(h.titleStyle)}>{h.title}</span>
+              <span style={css(h.tagStyle)}>{h.project}</span>
+            </div>
+            <div style={css(h.bodyStyle)}>
+              <div style={{"fontSize": "15px", "lineHeight": "1.6", "color": "#475569", "marginTop": "10px"}}>{h.text}</div>
+              <div style={{"marginTop": "12px", "padding": "12px 14px", "background": "#F1F5FE", "borderRadius": "10px", "fontSize": "14px", "lineHeight": "1.55", "color": "#0A2540"}}><span style={{"display": "block", "fontSize": "11px", "fontWeight": "800", "letterSpacing": "1.5px", "color": "#1D4ED8", "marginBottom": "3px"}}>REAL EXAMPLE</span>{h.ex}</div>
+            </div>
+            <span style={css(h.fill)}></span>
+          </button>
         </React.Fragment>))}
+      </div>
+      <div className={"v-demo"} style={{"flex": "1 1 540px", "minWidth": "0", "position": "sticky", "top": "96px"}}>
+        <div style={{"border": "1px solid rgba(255,255,255,.12)", "borderRadius": "18px", "padding": "22px", "boxSizing": "border-box", "background": "#06142B", "color": "#FFFFFF", "boxShadow": "0 50px 90px -50px rgba(6,20,43,.9)"}}>
+          <div style={{"display": "flex", "justifyContent": "space-between", "alignItems": "center", "gap": "10px", "flexWrap": "wrap"}}>
+            <div style={{"fontSize": "12px", "fontWeight": "700", "letterSpacing": "2px", "textTransform": "uppercase", "color": "#7F93B5"}}>Live demo · 24 sample orders</div>
+            <div style={{"fontSize": "12px", "fontWeight": "700", "color": "#67E8F9"}}>{v.stageNum}</div>
+          </div>
+
+          <div style={{"position": "relative", "height": "410px", "marginTop": "18px", "fontFamily": "'JetBrains Mono', monospace"}}>
+            <div className={"v-fx v-thead"} style={css(v.headerStyle)}><span>order_id</span><span>category</span><span>amount</span></div>
+            {(v.scanOn) ? (<><div className={"v-scan"}></div></>) : null}
+            {(v.recs || []).map((r, _i0) => (<React.Fragment key={_i0}>
+              <div className={"v-rec"} style={css(r.style)}><span>{r.id}</span><span>{r.cat}</span><span>{r.amt}</span><span style={css(r.flagStyle)}>{r.flag}</span></div>
+            </React.Fragment>))}
+            {(v.colLabels || []).map((l, _i0) => (<React.Fragment key={_i0}>
+              <div className={"v-fx"} style={css(l.style)}>
+                <div style={css(l.valStyle)}>{l.rev}</div>
+                <div style={{"fontFamily": "Manrope, sans-serif", "fontSize": "12px", "fontWeight": "700", "color": "#C7D2E5", "marginTop": "2px"}}>{l.name}</div>
+              </div>
+            </React.Fragment>))}
+            <div className={"v-fx"} style={css(v.decisionStyle)}>
+              <div style={{"fontFamily": "Manrope, sans-serif", "fontSize": "11px", "fontWeight": "800", "letterSpacing": "1.5px", "textTransform": "uppercase", "color": "#06142B", "opacity": ".7"}}>Recommendation</div>
+              <div style={{"fontFamily": "Manrope, sans-serif", "fontSize": "16px", "fontWeight": "800", "lineHeight": "1.4", "marginTop": "6px", "color": "#06142B"}}>{v.decisionText}</div>
+            </div>
+          </div>
+
+          <div style={{"borderTop": "1px solid rgba(255,255,255,.1)", "paddingTop": "14px", "display": "flex", "flexDirection": "column", "gap": "8px"}}>
+            <div style={{"fontSize": "15px", "fontWeight": "700", "color": "#FFFFFF", "minHeight": "21px"}}>{v.caption}</div>
+            <div style={{"fontFamily": "'JetBrains Mono', monospace", "fontSize": "12px", "color": "#67E8F9", "minHeight": "34px", "whiteSpace": "pre-wrap", "wordBreak": "break-word", "lineHeight": "1.45"}}>{v.sqlTyped}<span className={"v-caret"}></span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -484,6 +475,13 @@ function Template({ v }) {
       </div>
     </div>
   </section>
+  {(v.lbOpen) ? (<>
+    <div className={"v-lb"} role={"dialog"} aria-modal={"true"} aria-label={"Enlarged screenshot"} data-lenis-prevent={"true"} onClick={v.closeLb} style={{"position": "fixed", "inset": "0", "zIndex": "100", "background": "rgba(6,20,43,.94)", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "center", "padding": "20px", "boxSizing": "border-box", "cursor": "zoom-out"}}>
+      <img loading={"lazy"} decoding={"async"} className={"v-lbimg"} src={v.lbSrc} alt={v.lbAlt} style={{"maxWidth": "100%", "maxHeight": "calc(100vh - 110px)", "objectFit": "contain", "borderRadius": "10px", "background": "#FFFFFF", "boxShadow": "0 40px 90px -30px rgba(0,0,0,.8)"}} />
+      <div style={{"marginTop": "16px", "maxWidth": "900px", "color": "#C7D2E5", "fontSize": "14px", "fontWeight": "600", "textAlign": "center", "lineHeight": "1.5"}}>{v.lbAlt}<br /><span style={{"color": "#7F93B5", "fontWeight": "500"}}>Tap anywhere or press Esc to close</span></div>
+      <button type={"button"} aria-label={"Close"} onClick={v.closeLb} style={{"position": "absolute", "top": "16px", "right": "16px", "width": "44px", "height": "44px", "borderRadius": "50%", "border": "1px solid rgba(255,255,255,.25)", "background": "rgba(255,255,255,.08)", "color": "#FFFFFF", "fontSize": "22px", "cursor": "pointer", "fontFamily": "inherit"}}>×</button>
+    </div>
+  </>) : null}
 </div>
   );
 }
@@ -505,13 +503,15 @@ class Portfolio extends DCLogic {
       this.setState({ stage: (S.stage + 1) % 4, stageStart: Date.now() });
     }, 4400);
     this.tickTimer = setInterval(() => this.setState({ tick: this.S().tick + 1 }), 1500);
-    this.frameTimer = setInterval(() => { if (document.hidden) return; const heroH = (this.canvas && this.canvas.clientHeight) || 900; if (this.S().scrollTop < heroH || Date.now() - (this._seenAt || 0) < 2600) this.forceUpdate(); }, 90);
+    this.frameTimer = setInterval(() => { if (document.hidden) return; const heroH = (this.canvas && this.canvas.clientHeight) || 900; const S0 = this.S(); if (S0.scrollTop < heroH || (S0.seen && S0.seen.demo) || Date.now() - (this._seenAt || 0) < 2600) this.forceUpdate(); }, 90);
     this._onWin = () => { if (this._scrollRaf) return; this._scrollRaf = requestAnimationFrame(() => { this._scrollRaf = 0; this.onWinScroll(); }); };
     window.addEventListener('scroll', this._onWin, { passive: true });
     window.addEventListener('resize', this._onWin);
     this.onWinScroll();
     if (this.props.onMount) this.props.onMount(this);
     this.setupObserver();
+    this._onKey = (e) => { if (e.key === 'Escape' && this.S().lb) this.setState({ lb: null }); };
+    window.addEventListener('keydown', this._onKey);
     this.initPipe();
     try { this.reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { this.reduce = false; }
     const loop = (ts) => { if (!document.hidden) this.drawPipe(ts); this.raf = requestAnimationFrame(loop); };
@@ -519,6 +519,7 @@ class Portfolio extends DCLogic {
   }
   componentWillUnmount() {
     clearInterval(this.stageTimer); clearInterval(this.tickTimer); clearInterval(this.frameTimer);
+    window.removeEventListener('keydown', this._onKey);
     cancelAnimationFrame(this.raf);
     window.removeEventListener('scroll', this._onWin); window.removeEventListener('resize', this._onWin);
     if (this.ioIn) this.ioIn.disconnect();
@@ -543,7 +544,7 @@ class Portfolio extends DCLogic {
       }, { root, threshold: 0, rootMargin: '140px 0px 140px 0px' });
       Object.keys(this.els).forEach((k) => { this.ioIn.observe(this.els[k]); this.ioOut.observe(this.els[k]); });
     } catch (e) {
-      const seen = {}; ['impact','workHead','p1','p2','p3','p4','skills','process','about','contact','hero','m1','c2','m2','c3','m3','c5','m5','res','jr'].forEach((k) => { seen[k] = Date.now(); });
+      const seen = {}; ['impact','workHead','p1','p2','p3','p4','skills','process','about','contact','hero','demo','m1','c2','m2','c3','m3','c5','m5','res','jr'].forEach((k) => { seen[k] = Date.now(); });
       this.setState({ seen });
     }
   }
@@ -836,7 +837,7 @@ class Portfolio extends DCLogic {
       style: 'position:absolute;left:calc(' + (10 + i * 20) + '% - 46px);width:92px;text-align:center;top:352px;opacity:' + (stage >= 2 ? 1 : 0) + ';transform:translateY(' + (stage >= 2 ? 0 : 12) + 'px)'
     }));
     const captions = [
-      '24 order records come in straight from the source.',
+      'The question: which category should we focus on? 24 raw orders come in.',
       'Cleaning: 2 missing amounts and 2 duplicate rows get removed.',
       '20 clean orders, grouped and summed by category.',
       cats[top] + ' is only ' + cnt[top] + ' of 20 orders, but brings in ' + share + '% of revenue.'
@@ -972,11 +973,11 @@ class Portfolio extends DCLogic {
 
     // ---------- process ----------
     const process = [
-      ['01', 'Ask', 'Turn a vague goal into one clear business question.', 'Where should a ₹1 crore call-centre investment go?'],
-      ['02', 'Clean', 'Fix missing values, duplicates and formats before any analysis.', 'Kept 6,699 blank hospital satisfaction scores as blank, not zero, so the averages stay honest.'],
-      ['03', 'Analyse', 'Find the pattern with SQL, Excel, Power BI or Python.', 'Measured yearly churn in Chinook with a CTE and a self-join.'],
-      ['04', 'Recommend', 'Say what to do next, and be clear about what the data cannot tell us.', 'Invest, harvest or drop for every product in ProductIQ.']
-    ].map((p, i) => ({ n: p[0], title: p[1], text: p[2], ex: p[3],
+      ['01', 'Ask', 'Turn a vague goal into one clear business question.', 'AstroSage: “Where should a ₹1 crore call-centre investment go?”', 'AstroSage'],
+      ['02', 'Clean', 'Fix missing values, duplicates and formats before any analysis.', 'Columbia Asia: kept 6,699 blank satisfaction scores as blank, not zero, so the averages stay honest.', 'Columbia Asia'],
+      ['03', 'Analyse', 'Find the pattern with SQL, Excel, Power BI or Python.', 'Chinook: measured yearly churn with a CTE and a self-join.', 'Chinook'],
+      ['04', 'Recommend', 'Say what to do next, and be clear about what the data cannot tell us.', 'ProductIQ: invest, harvest or drop for every product, with the reason.', 'ProductIQ']
+    ].map((p, i) => ({ n: p[0], title: p[1], text: p[2], ex: p[3], project: p[4],
       node: 'display:block;width:28px;height:28px;border-radius:50%;box-sizing:border-box;animation-delay:' + (0.3 + i * 1.4).toFixed(1) + 's',
       titleStyle: 'font-size:26px;font-weight:800;margin-top:6px;animation-delay:' + (0.3 + i * 1.4).toFixed(1) + 's' }));
 
@@ -984,15 +985,15 @@ class Portfolio extends DCLogic {
     const profile = [['name', 'Aditya Jadhav'], ['role', 'Data Analyst'], ['based_in', 'Maharashtra, India'], ['open_to', 'Relocation, remote work'], ['tools', 'SQL, Power BI, DAX, Excel, Python'], ['shipped', 'ProductIQ (live AI app)'], ['research', 'Paper published by Springer'], ['leadership', 'Project lead, team of 5'], ['looking_for', 'Data Analyst roles']]
       .map((r, i) => ({ k: r[0], v: r[1], style: 'display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #1E3A5F;animation-delay:' + (0.2 + i * 0.12).toFixed(2) + 's' }));
     // ---------- query console ----------
-    const skillTop = flat.map((x, k) => [x[0], Object.keys(x[1]).length, k]).sort((a, b) => b[1] - a[1] || a[2] - b[2]).slice(0, 5);
+    const coreTools = ['SQL / MySQL', 'Power BI', 'Excel', 'Python'].map((n) => { const f = flat.find((x) => x[0] === n); return [n, f ? Object.keys(f[1]).join(', ') : '']; });
     const QUERIES = [
       { label: 'my profile', sql: 'SELECT * FROM aditya;', key: '130px', head: null, rows: profile.map((r) => [r.k, r.v]) },
       { label: 'projects', sql: 'SELECT project, tools FROM projects;', key: 'min(48%, 230px)', head: ['project', 'tools'],
         rows: [['ProductIQ', 'Python, MySQL, Power BI, Gemini API', 'p1'], ['Columbia Asia Hospital', 'MySQL, Power BI, DAX, Power Query', 'p2'], ['Chinook Music Store', 'MySQL, CTEs, window functions', 'p3'], ['AstroSage Call Centre', 'Excel, pivot tables, dashboard', 'p4']] },
       { label: 'key results', sql: 'SELECT project, key_result FROM projects;', key: 'min(48%, 230px)', head: ['project', 'key_result'],
         rows: [['ProductIQ', '1,131 of 1,850 products classified in under 30s', 'p1'], ['Columbia Asia Hospital', '78.6% of 9,216 visits go to one department', 'p2'], ['Chinook Music Store', '15 medium-risk customers flagged for retention', 'p3'], ['AstroSage Call Centre', '₹1 crore investment split across 5 areas', 'p4']] },
-      { label: 'top skills', sql: 'SELECT skill, COUNT(*) AS projects FROM skills_used GROUP BY skill ORDER BY projects DESC LIMIT 5;', key: 'min(48%, 230px)', head: ['skill', 'projects'],
-        rows: skillTop.map((x) => [x[0], x[1] + ' of 4']) }
+      { label: 'core tools', sql: 'SELECT tool, used_in FROM core_tools;', key: 'min(40%, 180px)', head: ['tool', 'used_in'],
+        rows: coreTools }
     ];
     const qi = st.q || 0, Q = QUERIES[qi];
     const qEl = st.qStart ? Date.now() - st.qStart : 1e9;
@@ -1010,6 +1011,15 @@ class Portfolio extends DCLogic {
       style: 'display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid #1E3A5F;animation-delay:' + (st.qStart ? (typeMs / 1000 + 0.1 + i * 0.08) : (0.2 + i * 0.12)).toFixed(2) + 's' }));
     const qTyped = st.qStart ? Q.sql.slice(0, Math.floor(qEl / 18)) : Q.sql;
     const qDone = !st.qStart || qEl >= typeMs;
+    const howSteps = process.map((p, i) => { const on = i === stage, done = i < stage;
+      return Object.assign({}, p, { pressed: on ? 'true' : 'false',
+        pick: () => this.setState({ stage: i, manualStage: true, stageStart: Date.now() }),
+        style: 'position:relative;overflow:hidden;display:block;width:100%;text-align:left;font-family:inherit;color:#0A2540;cursor:pointer;padding:18px 20px;border-radius:14px;border:1.5px solid ' + (on ? '#0A2540' : '#E5E9F0') + ';background:' + (on ? '#FFFFFF' : '#F8FAFD') + ';box-shadow:' + (on ? '0 24px 50px -34px rgba(10,37,64,.55)' : 'none'),
+        numStyle: 'flex:none;width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;transition:background .3s,color .3s;background:' + (on ? '#0A2540' : done ? '#DBE6FD' : '#FFFFFF') + ';color:' + (on ? '#FFFFFF' : '#1D4ED8') + ';border:1.5px solid ' + (on ? '#0A2540' : '#CBD5E1'),
+        titleStyle: 'flex:1;min-width:0;font-size:' + (on ? 24 : 20) + 'px;font-weight:800;letter-spacing:-0.5px;transition:font-size .3s,color .3s;color:' + (on ? '#0A2540' : '#64748B'),
+        tagStyle: 'flex:none;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:' + (on ? '#F1F5FE' : 'transparent') + ';color:' + (on ? '#1D4ED8' : '#94A3B8'),
+        bodyStyle: 'overflow:hidden;transition:max-height .5s cubic-bezier(.2,.7,.2,1),opacity .4s;max-height:' + (on ? '260px' : '0') + ';opacity:' + (on ? 1 : 0),
+        fill: 'position:absolute;left:0;bottom:0;height:3px;background:#1D4ED8;transition:width .1s linear;width:' + (on ? Math.min(100, stageEl / 44) : 0) + '%' }); });
     const ringOn = !!seen.about;
     const rings = [
       { v: '84.46%', unit: 'SCORE', title: 'Diploma, Computer Engineering', sub: 'D.Y. Patil Polytechnic · 2022', badge: 'College Topper', pct: 0.8446 },
@@ -1081,16 +1091,21 @@ class Portfolio extends DCLogic {
       cls, impact, tools: tools.concat(tools), tools2: tools2.concat(tools2),
       refHero: this.mkRef('hero'), refImpact: this.mkRef('impact'), refWorkHead: this.mkRef('workHead'),
       refP1: this.mkRef('p1'), refP2: this.mkRef('p2'), refP3: this.mkRef('p3'), refP4: this.mkRef('p4'),
-      refSkills: this.mkRef('skills'), refProcess: this.mkRef('process'), refAbout: this.mkRef('about'), refContact: this.mkRef('contact'),
+      refSkills: this.mkRef('skills'), refDemo: this.mkRef('demo'), refProcess: this.mkRef('process'), refAbout: this.mkRef('about'), refContact: this.mkRef('contact'),
       projList, projProgress: 'height:100%;background:#1D4ED8;transition:width .5s;width:' + ((st.proj + 1) * 25) + '%', projCounter: '0' + (st.proj + 1) + ' / 04',
       p1a: fmt(9994 * e1), p1b: fmt(1850 * e1), frameUrl: SH[cs][3], p1c: Math.round(30 * e1), tabs, tabText: tabContent[st.tab], shots, shotTabs,
       p2a: fmt(28027 * e2), p2b: Math.round(46 * e2), p2c: Math.round(79 * e2), peaks, alloc,
+      lbOpen: !!st.lb, lbSrc: st.lb ? st.lb[0] : '', lbAlt: st.lb ? st.lb[1] : '',
+      closeLb: () => this.setState({ lb: null }),
+      zoomShot1: () => this.setState({ lb: [SH[cs][0], SH[cs][2]] }),
+      zoomShot2: () => this.setState({ lb: [CASH[cc][0], CASH[cc][2]] }),
+      zoomAstro: () => this.setState({ lb: ['/images/astrosage-excel-dashboard.jpg', 'AstroSage Excel dashboard: 7 KPIs, 12 charts and slicers'] }),
       caShots, caTabs, caDepts, caRecs, caPage: CASH[cc][1], p5a: fmt(9216 * e5), p5b: (78.6 * e5).toFixed(1), p5c: (35.26 * e5).toFixed(2),
       tilt3: tiltFn(3), untilt3: () => this.setState({ tilt3: null }), tiltStyle3: tiltOf(3),
       p3a: fmt(59 * e3), p3b: fmt(24 * e3), p3c: (53.38 * e3).toFixed(1),
       groups, projRows, selName: cur[0], selCount: used,
       selFill: 'height:100%;background:#1D4ED8;border-radius:99px;transition:width .7s cubic-bezier(.2,.7,.2,1);width:' + (used / 4 * 100).toFixed(1) + '%',
-      process, profile, rings, qualities, journey,
+      process, howSteps, stageNum: 'Step ' + (stage + 1) + ' of 4', profile, rings, qualities, journey,
       qPills, qRows, qTyped,
       qCount: qDone ? Q.rows.length + ' rows returned' + (Q.rows[0][2] ? '  ·  click a project to jump to it' : '') : 'running…',
       qHead: Q.head ? 'display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #1E3A5F;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#5E7398' : 'display:none',
